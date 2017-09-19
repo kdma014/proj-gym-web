@@ -1,0 +1,22 @@
+# Libraries and Frameworks used
+
+The awesome JavaScript and CSS frameworks and libs. used to create this website. 
+
+### Typography
+* Helvetica
+
+### General CSS
+* Normalize CSS
+
+
+### Layout
+* Bootstrap Beta v4
+
+### JavaScript Frameworks
+* Modernizr 2.8.3
+* jQuery 1.12.0
+* Bootstrap Beta v4
+* jQuery.bxSlider
+* PopperJS
+* WowJS
+
