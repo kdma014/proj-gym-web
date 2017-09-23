@@ -24,6 +24,599 @@
 
   <body class="webapp">
 
+    <!-- 
+       @ Main Header and Nav 
+       @ Consists of the log and the navigation bar
+    -->
+    <header class="main-header">
+        <div class="container inner">
+            <div class="row">
+
+                <hr class="leftLine"/>
+
+                <!-- Left Page Links -->
+                <div class="col-3 d-md-none d-lg-none d-xl-none d-flex align-items-center justify-content-start">
+                    <a class="pull-left mob-nav-icon " href="#mobDropdown" id="mobMenuDropdownBtn">
+                        <img src="assets/img/icons/menu.svg" width="22">
+                    </a>
+                </div>
+ 
+
+                <div class="col-md-5 col-2 d-md-flex navigation-cols">
+                    <div class="navigation" id="nav_left">
+                        <ul class="nav  nav-fill">
+                            <li class="nav-item dropdown" >
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="programs.html">Programs <i class="fa fa-caret-right fa-fw"></i></a>
+
+                                <!-- dropdown menu for programs -->
+                                <div class="dropdown-menu programs-dropdown boxed-dropdown" id="programs" style="width: 540px; ">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <ul class="nav flex-column dropdown-list-menu">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#gym" data-image="images/programs/Gym_3.png">Gym by Gym</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#zumbafitness" data-image="images/programs/Zumba_3.png">Zumba Fitness</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#reduce" data-image="images/programs/Reduce_3.png">Reduce by Gym</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#zorbamembership" data-image="images/programs/Zorba_3.png">Zorba Membership</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#nuform" data-image="images/programs/Nuform_3.png">Nuform by Gym</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#gymhifi" >Gym HIFI</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#corporate" >Corporate Membership</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-7 d-flex">
+                                            <img src="images/programs/Gym_3.png" class="changing-image img-fluid" id="programs_dropdown_img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- dropdown menu end -->
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gym-finder.html">Gym Finder</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" href="#shop_menu">Shop <i class="fa fa-caret-right fa-fw"></i></a>
+
+                                <div class="dropdown-menu shop-dropdown boxed-dropdown" id="shop_menu" style="width: 300px">
+                                    <ul class="nav flex-column dropdown-list-menu">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#shop1">Shop Item</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#shop1">Shop Item</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#shop1">Shop Item</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#shop1">Shop Item</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <!-- Center Logo -->
+                <div class="col-md-2 col-6">
+                    <div class="logo text-center">
+                        <img src="img/talwalkars_logo.png" class="lg-logo d-xl-block d-md-block d-lg-block d-none " width="72">
+                        <img src="img/talwalkars_logo_2_lg.png" class="sm-logo" width="72">
+                    </div>
+                </div>
+
+
+                <!-- Right Page Links -->
+                <div class="col-3 d-md-none d-lg-none d-xl-none d-flex align-items-center justify-content-end">
+                    <a class="pull-right mob-nav-icon" href="#sign-in" id="mobSignInLink">
+                        <img src="assets/img/icons/user-icon.svg" width="22">
+                    </a>
+                </div>
+                
+                
+                <div class="col-md-5 col-2 d-md-flex navigation-cols">
+                    <div class="navigation" id="nav_left">
+                        <ul class="nav nav-fill">
+                            <li class="nav-item">
+                                <a class="nav-link" href="one-day-pass.html">One Day Pass </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us </i></a>
+                            </li>
+
+                            <li class="nav-item sign-in">
+                                <a class="nav-link" style="color: #D51919;" href="sign-in.html"><img src="assets/img/icons/sign_in.png"> <span>Sign In</span></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <!-- DROPDOWN MENU FOR MOBILE -->
+        <div class="mob-page-menu" id="mobileMenuDropdown">
+
+            <ul class="nav flex-column mob-nav-primarymenu animated fadeInLeft" id="mob_menu_primary">
+                <li>
+                    <a class="secondary-mob-menu" data-target="#programsNavMob" href="#programs">Programs <i class="fa fa-angle-right fa-fw"></i></a>
+                </li>
+
+                <li>
+                    <a href="gym-finder.html">Gym Finder</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">Shop</a>
+                </li>
+
+                <li>
+                    <a href="one-day-pass.html">One Day Pass</a>
+                </li>
+
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+
+                <li class="close-mob-menu">
+                    <a href="#close" id="close_mob_menu">
+                        <img src="assets/img/icons/close.svg" width="25">
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav flex-column d-none mob-nav-secondarymenu animated fadeInRight"  id="programsNavMob">
+                <li>
+                    <a href="#"><b>View all programs</b></a>
+                </li>
+                <li>
+                    <a href="#">Gym by Gym</a>
+                </li>
+
+                <li>
+                    <a href="#">Zumba Fitness</a>
+                </li>
+
+                <li>
+                    <a href="#">Reduce by Gym</a>
+                </li>
+
+                <li>
+                    <a href="#">Zorba Membership</a>
+                </li>
+
+                <li>
+                    <a href="#">Nuform by Gym</a>
+                </li>
+
+                <li>
+                    <a href="#">Corporate Membership</a>
+                </li>
+
+                <li>
+                    <a href="#">David Lloyd Leisure Club</a>
+                </li>
+
+                <li class="back-menu-mob">
+                    <a href="#back" id="back_mob_menu_1" class="back-menu-link">
+                        <img src="assets/img/icons/left-arrow.svg" width="25">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </header> <!-- # main header end -->
+
+
+
+    <!-- 
+       @ Main Content
+       @ Sections, sliders, buttons, forms, everything content goes here
+    -->
+
+    <!-- HOME PAGE SLIDER SECTION -->
+    <section class="section" id="slider_section">
+        <div class="owl-carousel slider-custom" id="home_slider_1" style="height: 620px; opacity: 0;">
+
+            <div class="owl-item" style="float: none;">
+                <div class="owl-item-content slide-canvas" style="height: 600px; background-color: #ff6829;">
+                    <div class="bg-image"></div>
+                    <div class="inside-content">
+                        
+                        <div class="d-flex justify-content-center align-items-center bg-stretch program-slide-content" style="padding: 20px;">
+                            <h2 data-animation="animated slideInLeft" class="slide-title"><span>JUMBA FITNESS</span></h2>
+                        </div>
+
+                        <div class="bg-stretch" style="top: initial; background-color: #000; height: 50px;" ></div>
+
+                        <div data-animation="animated zoomIn" class="program-slide-img bg-stretch" style="background-image: url('images/slides/section-zumba_520_ov.png'); background-repeat: no-repeat; background-position: center; background-size: contain; "></div>
+
+                        <div class="mob-know-more-btn">
+                            <a href="#" class="btn btn-default know-more-btn"><span>Buy Membership</span></a>
+                        </div>
+
+                        <div class="program-slide-bottom-bar bg-stretch" style="top: initial; background-color: #000; height: 50px; line-height: 50px;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="burn-count">
+                                            <span>CALORIE BURN: 700 Kcal</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-none d-md-block d-lg-block d-xl-block">
+                                        <div class="btn-container pull-right know-more-container">
+                                            <a href="#" class="btn btn-default know-more-btn"><span>Buy Membership</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="owl-item" style="float: none;">
+                <div class="owl-item-content slide-canvas" style="height:  600px; background-color: #ff6829;">
+                    <div class="bg-image"></div>
+
+                    <div class="inside-content" style="padding: 0 20px;">
+
+                        <div class="d-flex justify-content-end align-items-center bg-stretch" style="padding: 20px;">
+                            <h2 data-animation="animated slideInUp" class="slide-title">
+                                <span class="text-center"><span style="font-size: 2em;">JUMBA</span> <br> FITNESS</span>
+                            </h2>
+                        </div>
+
+                        <div data-animation="animated zoomInUp" class="bg-stretch" style="background-image: url('images/slides/section-zumba_520_ov.png'); background-repeat: no-repeat; background-position: left; background-size: contain; "></div>
+
+                        <div class="mob-know-more-btn">
+                            <a href="#" class="btn btn-default know-more-btn"><span>Buy Membership</span></a>
+                        </div>
+
+                        <div class="program-slide-bottom-bar bg-stretch" style="top: initial; background-color: #000; height: 50px; line-height: 50px;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="burn-count">
+                                            <span>CALORIE BURN: 700 Kcal</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-none d-md-block d-lg-block d-xl-block">
+                                        <div class="btn-container pull-right know-more-container">
+                                            <a href="#" class="btn btn-default know-more-btn"><span>Buy Membership</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="owl-item" style="float: none;">
+                <div class="owl-item-content slide-canvas" style="height:  600px; background-color: #ff6829;">
+                    <div class="bg-image"></div>
+
+                    <div class="inside-content" style="padding: 0 20px;">
+                        <div class="d-flex justify-content-end align-items-center bg-stretch" style="padding: 20px;">
+                            <h2 data-animation="animated slideInUp" class="slide-title">
+                                <span class="text-center"><span>JUMBA</span> <br> FITNESS</span>
+                            </h2>
+                        </div>
+
+                        <div data-animation="animated zoomInUp" class="bg-stretch" style="background-image: url('images/slides/section-zumba_520_ov.png'); background-repeat: no-repeat; background-position: center; background-size: contain; "></div>
+
+                        <div class="mob-know-more-btn">
+                            <a href="#" class="btn btn-default know-more-btn"><span>Buy Membership</span></a>
+                        </div>
+
+                        <div class="program-slide-bottom-bar bg-stretch" style="top: initial; background-color: #000; height: 50px; line-height: 50px;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="burn-count">
+                                            <span>CALORIE BURN: 700 Kcal</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-none d-md-block d-lg-block d-xl-block">
+                                        <div class="btn-container pull-right know-more-container">
+                                            <a href="#" class="btn btn-default know-more-btn"><span>Buy Membership</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>     
+    </section>
+
+
+    <!-- Track your Fitness / Full Image section -->
+    <section class="section track-fitness-section" id="track_fitness_sec">
+        <div class="container inner">
+            <div class="row">
+                <div class="col-md-8 d-md-block d-lg-block d-xl-block d-none"></div>
+                <div class="col-md-4 col-12">
+                    <div class="text-content" style="max-width: 360px;">
+                        <h3>Track your Fitness</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris lectus, rhoncus quis cursus sed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Success Stories Section -->
+    <section class="section success-stories-section bgRed" id="success_stories_section" >
+        <div class="row" style="margin: 0;">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-lg-9 col-md-11 ml-md-auto" style="padding-bottom: 4em; padding-top: 4em;">
+                        <h2 class="section-title">SUCCESS STORIES</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 mr-auto">
+                <div class="success-img-slides" style="height: 360px; width: 300px">
+                    <!-- Slide 1 -->
+                    <div class="slide-success-story" id="successSlide1">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Quick Gym Finder Section -->
+    <section class="section gym-finder-quick">
+        <div class="bg-stretch bg-image" style="background-image: url(images/nyc-map-orangeov.jpg);"></div>
+
+        <div class="container inner">
+            <h2>GYM FINDER</h2>
+
+            <div class="quick-finder-form">
+                <form action="gym-finder.html" name="quickGymFinderform">
+                    <input style="font-size: 2em;" type="text" name="quickGymFinder" placeholder="Search..">
+                </form>
+            </div>
+
+            <div class="quick-finder-popular">
+                <p><b>Popular Cities</b></p>
+                <a title="Talwalkars Gym in Mumbai" class="btn btn-default popular-cities-btn" href="gym-finder.html/?city=Mumbai">Mumbai</a>
+                <a title="Talwalkars Gym in Delhi" class="btn btn-default popular-cities-btn" href="gym-finder.html/?city=Delhi">Delhi</a>
+                <a title="Talwalkars Gym in Bangalore" class="btn btn-default popular-cities-btn" href="gym-finder.html/?city=Bangalore">Bangalore</a>
+                <a title="Talwalkars Gym in Kolkata" class="btn btn-default popular-cities-btn" href="gym-finder.html/?city=Kolkata">Kolkata</a>
+            </div>
+        </div>
+    </section>
+    <!-- # Quick Gym Finder Section end -->
+
+
+
+
+
+
+
+    <!-- 
+       @ Main Footer
+       @ Consists of links, company logo and more links at the bottom
+    -->
+    <footer class="main-footer">
+
+        <div class="container inner">
+            <!-- The links to site's important pages -->
+            <div class="footer-section footer-links-panel">
+                <div class="row">
+
+                    <!-- Column 1 -->
+                    <section class="col-12 col-md-2">
+
+                        <div class="links-col" id="links_aboutUs">
+                            <h4><a class="links-section-btn" href="#">About Us</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">History and Legacy</a></li>
+                                <li><a href="#">Board of Directors</a></li>
+                                <li><a href="#">Management Team</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_newsEvents">
+                            <h4><a class="links-section-btn" href="#">News and Events</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Press Releases</a></li>
+                                <li><a href="#">Media Kit</a></li>
+                            </ul>
+                        </div>
+
+                    </section>
+
+
+                    <!-- Column 2 -->
+
+                    <section class="col-12 col-md-2">
+
+                        <div class="links-col" id="links_partnership">
+                            <h4><a class="links-section-btn" href="#">Partnership</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Zorba</a></li>
+                                <li><a href="#">Power World Gyms</a></li>
+                                <li><a href="#">David Llyod Leisure</a></li>
+                                <li><a href="#">Zumba Fitness</a></li>
+                                <li><a href="#">Growfitter</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_beInspired">
+                            <h4><a class="links-section-btn" href="#">Be Inspired</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Share your story</a></li>
+                            </ul>
+                        </div>
+
+
+                    </section>
+                    
+
+                    <!-- Column 3 -->
+                    <section class="col-12 col-md-2">
+
+                        <div class="links-col" id="links_advertise">
+                            <h4><a class="links-section-btn" href="#">Advertise with Us</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Partner with us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_blog">
+                            <h4><a class="links-section-btn" href="#">News and Events</a></h4>
+                            <ul class="nav flex-column">
+                                <li><a href="#">Read our blog</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_franchise">
+                            <h4><a class="links-section-btn" href="#">Franchise</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Talwalkars Advatange</a></li>
+                                <li><a href="#">Apply Here</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_contactUs">
+                            <h4><a class="links-section-btn" href="#">Contact Us</a></h4>
+                            <ul class="nav">
+                                <li><a href="mailto:care@talwalkars.net">Care@talwalkars.net</a></li>
+                            </ul>
+                        </div>
+
+                    </section>
+
+                    <!-- Column 4 -->
+                    <section class="col-12 col-md-3">
+
+                        <div class="links-col" id="links_healthCalculator">
+                            <h4><a class="links-section-btn" href="#">Health Calculator</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Body Mass Index</a></li>
+                                <li><a href="#">Calorie Burn Calculator</a></li>
+                                <li><a href="#">Heart Rate Calculator</a></li>
+                                <li><a href="#">Ideal Weight Calculator</a></li>
+                                <li><a href="#">Body Fat Calculator</a></li>
+                                <li><a href="#">Basal Metabolic Rate</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_faqs">
+                            <h4><a class="links-section-btn" href="#">FAQS</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Frequently Asked Questions</a></li>
+                            </ul>
+                        </div>
+
+                    </section>
+
+
+                    <!-- Column 5 -->
+                    <section class="col-12 col-md-3">
+
+                        <div class="links-col" id="links_healthCalculator">
+                            <h4><a class="links-section-btn" href="#">Investor Relations</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Financial Profile</a></li>
+                                <li><a href="#">Investor Presentations</a></li>
+                                <li><a href="#">Shareholders Info</a></li>
+                                <li><a href="#">Research Reports</a></li>
+                                <li><a href="#">Corporate Announcements</a></li>
+                                <li><a href="#">Shareholding Pattern</a></li>
+                                <li><a href="#">Code of Conduct & Policies</a></li>
+                                <li><a href="#">Corporate Governance</a></li>
+                                <li><a href="#">Offer Documents</a></li>
+                            </ul>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-section social_connect">
+            <div class="container inner">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <h4 class="footer-section-title d-xl-block d-lg-block d-md-block d-none">Social Connect</h4>
+                        <div class="sc-links-container">
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-facebook"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-twitter"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-youtube-play"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-instagram"></i></a></div>
+
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-pinterest-p"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-google-plus"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-linkedin"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-circle-o"></i></a></div>
+                        </div>  
+
+                        <div class="offline-msg-container">
+                            <a class="offline-msg btn-block" href="#"><span>Offline Message</span></a>
+                        </div>                              
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+
+
 
 
 
