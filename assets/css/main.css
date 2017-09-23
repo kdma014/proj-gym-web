@@ -96,6 +96,14 @@ html, body {
     position: relative;
  }
 
+ .no-select {
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+ }
+
 
 
 
@@ -130,7 +138,7 @@ html, body {
 * Global Form Elments Styles
 */
 
-input[type="text"], input[type="email"], input[type="tel"], select {
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], select {
     display: block;
     background-color: transparent;
 
@@ -157,6 +165,13 @@ input[type="tel"]:focus {
     border-bottom: 1px solid #7b7b7b;
 }
 
+select {
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0MDcuNDM3IDQwNy40MzciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQwNy40MzcgNDA3LjQzNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+Cjxwb2x5Z29uIHBvaW50cz0iMzg2LjI1OCw5MS41NjcgMjAzLjcxOCwyNzMuNTEyIDIxLjE3OSw5MS41NjcgMCwxMTIuODE1IDIwMy43MTgsMzE1Ljg3IDQwNy40MzcsMTEyLjgxNSAiIGZpbGw9IiMwMDAwMDAiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+    background-position: right 0.6em center;
+    background-size: 0.8em 0.8em;
+    background-repeat: no-repeat;
+}
+
 
 
 
@@ -166,7 +181,7 @@ Main Header and Navbar
 -------------------------------------*/
 
 .main-header {
-    background-color: #111;
+    background-color: #000;
     padding-top: 0;
 
     top: 0;
@@ -190,6 +205,13 @@ Main Header and Navbar
     -webkit-transition: 0.2s all ease-in-out;
     -moz-transition: 0.2s all ease-in-out;
     transition: 0.2s all ease-in-out;
+
+    /* no select */
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .main-header .logo img {
@@ -222,7 +244,7 @@ Main Header and Navbar
 }
 
 .main-header .navigation > ul > li > .nav-link {
-    font-family: "Sintony-Regular";
+    font-family: "Helvetica";
     color: #fff;
     line-height: 18px;
 
@@ -457,11 +479,6 @@ PAGES : Home Page / Non-Members
     background-size: 1em;
 }
 
-
-
-
-
-
 @media (min-width: 768px) {
     #home_slider_1 .slide-title {
         font-size: 7em;
@@ -483,8 +500,6 @@ PAGES : Home Page / Non-Members
 /*
 * Quick Gym Finder Widget
 */
-
-
 
 .gym-finder-quick {
     background-color:#ff6829;
@@ -666,7 +681,6 @@ PAGES : CONTACT PAGE
 }
 
 .contact-form .form-row .input-field select {
-    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0MDcuNDM3IDQwNy40MzciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQwNy40MzcgNDA3LjQzNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+Cjxwb2x5Z29uIHBvaW50cz0iMzg2LjI1OCw5MS41NjcgMjAzLjcxOCwyNzMuNTEyIDIxLjE3OSw5MS41NjcgMCwxMTIuODE1IDIwMy43MTgsMzE1Ljg3IDQwNy40MzcsMTEyLjgxNSAiIGZpbGw9IiMwMDAwMDAiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
     background-position: right 0.6em center;
     background-size: 0.8em 0.8em;
     background-repeat: no-repeat;
@@ -728,6 +742,238 @@ PAGES : CONTACT PAGE
 }
 
 
+
+/*-------------------------------------------------------------
+PAGES : GYM FINDER PAGE
+--------------------------------------------------------------*/
+
+
+.gym-finder-section {
+    padding: 4em 0;
+    background-color: #e9edf0;
+}
+
+
+
+/* Gym Finder Controls */
+.gym-finder-controls {
+    margin-bottom: 2em;
+}
+
+.gym-finder-controls .form-block {
+    padding: 20px 0;
+}
+
+.gym-finder-controls .form-block input, 
+.gym-finder-controls .form-block select {
+    width: 100%;
+    max-width: 100%;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.gym-finder-controls .form-block select {
+    font-weight: 600;
+}
+
+/* Large location input */
+#location_name {
+    font-size: 27px;
+    text-transform: initial;
+    border-bottom-width: 2px ;
+}
+
+
+/* Gym Cards */
+
+
+.gyms-found {
+    height: 440px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+
+.gyms-found::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.0);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.gyms-found::-webkit-scrollbar
+{
+    width: 7px;
+    background-color: transparent;
+}
+
+.gyms-found::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,.0);
+    background-color: #6669;
+}
+
+
+.gym-card {
+    position: relative;
+    width: 100%;
+    margin: 1em 0;
+    float: left;
+    height: 200px;
+    background-color: #101010;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.gym-card  .gym-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5em 20px;
+    font-size: 14px;
+}
+
+
+@media (min-width: 768px) {
+    .gym-card {
+        width: 47%;
+        margin: 1em 1.5%;
+    }
+}
+
+
+
+/*-------------------------------------------------------------
+PAGES : SIGN-IN PAGE
+--------------------------------------------------------------*/
+#signInSection {
+    position: relative;
+    background-color: #d51919;
+    color: #fff;
+    background-image: url("../../images/weightlift-red-ov.jpg");
+}
+
+#signInSection .container {
+    padding: 4em 20px;
+    padding-bottom: 1em;
+}
+
+#signInSection a {
+    color:  rgba(255,255,255,0.8);
+}
+
+#signInSection a:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,1);
+}
+
+
+/* Inner Sign-in Box */
+
+.sign-in-box {
+    text-align: center;
+}
+
+.sign-in-box > h1 {
+    text-transform: uppercase;
+}
+
+
+.sign-in-box form {
+    max-width: 360px;
+    margin: 2em auto;
+}
+
+
+.sign-in-box form .form-row {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px 0;
+
+}
+
+.sign-in-box form .form-row .input-field {
+    position: relative;
+    width: 100%;
+}
+
+.sign-in-box form .form-row input[type="email"],
+.sign-in-box form .form-row input[type="password"],
+.sign-in-box form .form-row input[type="text"] {
+    position: relative;
+    width: 100% ;
+    font-size: 18px;
+
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(255,255,255,0.6);
+}
+
+.sign-in-box form .form-row input[type="email"]:focus,
+.sign-in-box form .form-row input[type="password"]:focus,
+.sign-in-box form .form-row input[type="text"]:focus {
+    border-bottom-color: #fff;
+}
+
+
+/* placeholder on sign-in input */
+.sign-in-box form .form-row input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0;
+}
+.sign-in-box form .form-row input::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0;
+}
+.sign-in-box form .form-row input:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0;
+}
+.sign-in-box form .form-row input:-moz-placeholder { /* Firefox 18- */
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0;
+}
+
+
+/* submit button */
+.sign-in-box form .form-row.submit-btn input[type="submit"] {
+    min-width: 180px;
+    max-width: 220px;
+    width: 85%;
+    margin: 0 auto;
+    background-color: #d51919;
+    text-transform: uppercase;
+}
+
+.sign-in-box form .form-row.submit-btn input[type="submit"]:hover {
+    color: #fff;
+    background-color: #aa1414;
+}
+
+
+.view-password-box {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.view-password-box > a {
+    display: block;
+}
+
+
+
 /*-------------------------------------------------------------
 MAIN FOOTER
 --------------------------------------------------------------*/
@@ -735,7 +981,7 @@ MAIN FOOTER
 
 .main-footer {
     position: relative;
-    background: #111;
+    background: #0a0a0a;
 }
 
 .main-footer a {
@@ -745,7 +991,7 @@ MAIN FOOTER
 
 .footer-section-title {
     font-weight: 400;
-    font-size: 19px;
+    font-size: 16px;
     text-transform: uppercase;
     margin: 1em 0;
     margin-bottom: 0.5em;
@@ -834,18 +1080,20 @@ MAIN FOOTER
 
 
 /* Social Media Links */
-
+.sc-links-container {
+    text-align: center;
+}
 .sc-block {
-    width: 24%;
+    width: 23.5%;
     display: inline-block;
     margin: 1em 0;
     text-align: center;
 }
 .social-media-link {
     display: block;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
     background: #d51919;
     text-align: center;
     border-radius: 50%;
@@ -863,7 +1111,7 @@ MAIN FOOTER
 }
 
 .offline-msg {
-    padding: 1em 0;
+    padding: 0.5em 0;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none !important;
@@ -906,6 +1154,9 @@ MAIN FOOTER
 
 
     /* Social Media Links */
+    .sc-links-container {
+        text-align: left;
+    }
     .sc-block .social-media-link {
         display: block;
         width: 32px;
@@ -922,6 +1173,84 @@ MAIN FOOTER
     }
 }
 
+
+/* Footer Bottom Stripe / Copyright and other links */
+
+
+.bottom-stripe {
+    background-color: #000;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 0 0;
+}
+
+
+.bottom-stripe .links-block, 
+.bottom-stripe .copyright-block {
+    display: block;
+    text-align: center;
+}
+
+
+.bottom-stripe .links-block {
+    padding: 1em 0;
+}
+.bottom-stripe .links-block > a.btn {
+    margin-bottom: 0.25em;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 0;
+    border-right: 2px solid #888;
+
+    padding: 0.25rem 0.75rem;
+}
+
+.bottom-stripe .links-block > a.btn:hover,
+.bottom-stripe .links-block > a.btn:focus,
+.bottom-stripe .links-block > a.btn:active{
+    color: #ff6829;
+    outline: none;
+    box-shadow: none;
+}
+
+.bottom-stripe .links-block > a.btn:last-child {
+    border-right-width: 0;
+}
+
+
+.bottom-stripe .copyright-block {
+    padding: 1em 0.75rem;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.bottom-stripe .copyright-block > p {
+    margin-bottom: 0.25em;
+    padding: 0.25em 0.5rem;
+}
+
+
+@media (min-width: 768px) {
+    .bottom-stripe {
+        background-color: #111;
+    }
+
+    .bottom-stripe .links-block, 
+    .bottom-stripe .copyright-block {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .bottom-stripe .links-block > a.btn:last-child {
+        border-right-width: 2px;
+    }
+
+    .bottom-stripe .copyright-text {
+        font-size: 0.9rem;
+    }
+
+}
 
 
 
