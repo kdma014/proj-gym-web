@@ -172,6 +172,72 @@
 
 
 
+    /*
+    * SUCCESS STORIES CAROUSEL
+    */
+
+    // Populate the custom page
+    var successCustomPager = "#bx-custom-pager";
+
+    $(".success-story-slider > li").each(function(e){
+      var newPagerItem = '<a data-slide-index="'+ e +'" href="">' + (e+1) + '</a>';
+      $(successCustomPager).append( newPagerItem );
+    });
+
+
+
+    // Initialize the image before/after slider
+    var $successStoryImageSliders = $(".success-story-img-slides");
+    var successStoryImageOpts = {
+      mode: "fade",
+      hideControlOnEnd: true,
+      infiniteLoop: false,
+
+      // Hide fault next - prev
+      controls: false,
+      pager: true,
+      pagerType: "full",
+    };
+
+    var successImageBxSlider = $successStoryImageSliders.bxSlider( successStoryImageOpts );
+
+    // Initialize the content slider
+
+    var $successStorySlider = $(".success-story-slider");
+
+    var successStoryOpts = {
+
+      hideControlOnEnd: true,
+      infiniteLoop: false,
+
+      // Hide fault next - prev
+      controls: true,
+      pager: true,
+      pagerType: "full",
+
+      // Next - Prev
+      nextSelector: '#success_next_slide',
+      prevSelector: '#success_prev_slide',
+      pagerCustom:  successCustomPager,
+
+      // Changing the image sliders for success story
+      onSlideAfter: function( $slideElement, oldIndex, newIndex ){
+        // Hide the old slide
+        $("[data-success-image='"+ (oldIndex + 1) +"']").addClass("invisible");
+
+        // Show the new slide
+        $("[data-success-image='"+ (newIndex + 1) +"']").removeClass("invisible");
+
+      }
+
+    };
+
+    var successBxSlider = $successStorySlider.bxSlider( successStoryOpts );
+
+
+
+
+
 
     /*------------------------------------------------------
     * CONTACT US PAGE 

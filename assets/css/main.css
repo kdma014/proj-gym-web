@@ -498,6 +498,268 @@ PAGES : Home Page / Non-Members
 
 
 /*
+* Success Stories Slider Styles
+*/
+
+
+.success-story-container {
+    margin-top: 1em;
+}
+
+
+.success-story-container .bx-wrapper {
+    margin-bottom: 30px;
+    background-color: transparent;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0 transparent;
+}
+
+.success-story-container  .bx-wrapper .bx-pager-item {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.success-story-container  .bx-wrapper .bx-pager.bx-default-pager a {
+    background: transparent;
+    text-indent: 0px;
+    display: block;
+    width: 25px;
+    height: initial;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+
+    color: #fff;
+    opacity: 0.6;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+.success-story-container .bx-wrapper .bx-pager.bx-default-pager a.active, 
+.success-story-container .bx-wrapper .bx-pager.bx-default-pager a:focus, 
+.success-story-container .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background-color: transparent;
+    opacity: 1;
+}
+
+.success-story-slider {
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/* Custom Pager for Success Slider */
+.custom-bx-pager {
+    font-size: 14px;
+}
+
+.custom-bx-pager a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#bx-custom-pager a {
+    display: inline-block;
+    opacity: 0.5;
+    width: 25px;
+
+    -webkit-transition: 0.1s all ease-in-out;
+    -moz-transition: 0.1s all ease-in-out;
+    transition: 0.1s all ease-in-out;
+}
+
+#bx-custom-pager a.active,
+#bx-custom-pager a:hover,
+#bx-custom-pager a:focus {
+    opacity: 1;
+}
+
+
+.direction-pager {
+    font-size: 0;
+}
+
+.direction-pager a.bx-prev,
+.direction-pager a.bx-next {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background: url("../img/icons/up-button.svg") no-repeat center;
+    background-size: 30px 30px;
+
+    -webkit-transition: 0.1s all ease-in-out;
+    -moz-transition: 0.1s all ease-in-out;
+    transition: 0.1s all ease-in-out;
+}
+
+.direction-pager a.bx-prev:not(.disabled):hover,
+.direction-pager a.bx-prev:not(.disabled):active,
+.direction-pager a.bx-next:not(.disabled):hover,
+.direction-pager a.bx-next:not(.disabled):active {
+    background-size: 25px 25px;
+}
+
+
+
+.direction-pager a.bx-prev {
+    -webkit-transform: rotate(-90deg);
+} 
+.direction-pager a.bx-next {
+    -webkit-transform: rotate(90deg);
+}
+
+
+.direction-pager a.disabled {
+    opacity: 0.5;
+}
+
+/* Slider Content Styling */
+.success-story-slider li {
+    font-size: 14px;
+    padding: 10px 0px;
+}
+
+.success-story-slider li .top-heading {
+    padding: 1em 0;
+    padding-top: 0;
+}
+
+.success-story-slider li .top-heading .name {
+
+}
+
+
+
+.success-story-slider li .story .read-full-story {
+    color: #fff;
+    font-weight: 600;
+}
+
+.success-story-slider li .story .read-full-story:hover {
+    text-decoration: none;
+    color: #ffcbcb;
+}
+
+
+
+/*
+* Success Story Side Image Slide 
+*/
+
+.success-img-slides {
+    position: relative;
+    width: 300px;
+    height: 368px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.success-story-img-slides {
+    padding: 0 !important;
+}
+
+.slide-success-story {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    opacity: 1;
+    z-index: 1;
+
+
+    -webkit-transition: 0.5s all ease-in-out;
+    -moz-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out;
+}
+
+.slide-success-story.invisible {
+    opacity: 0;
+    z-index: 0;
+
+
+    -webkit-transition: 0.5s all ease-in-out;
+    -moz-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out;
+}
+
+.success-story-image-slider .bx-wrapper {
+    margin-bottom: 0px;
+    background-color: transparent;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0 transparent;
+}
+
+.success-story-image-slider .bx-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.success-story-image-slider .bx-wrapper .bx-pager {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.success-story-image-slider .bx-wrapper .bx-pager.bx-default-pager a {
+    background-color: #fff;
+    opacity: 0.5;
+
+    transition: 0.1s all ease-in-out;
+}
+
+.success-story-image-slider .bx-wrapper .bx-pager.bx-default-pager a.active, 
+.success-story-image-slider .bx-wrapper .bx-pager.bx-default-pager a:focus, 
+.success-story-image-slider .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background-color: #fff;
+    opacity: 1;
+    width: 18px;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .success-img-slides {
+        position: relative;
+        width: 375px;
+        height: 460px;
+        margin-left: auto;
+        margin-right: -15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 * Quick Gym Finder Widget
 */
 
@@ -750,7 +1012,7 @@ PAGES : GYM FINDER PAGE
 
 .gym-finder-section {
     padding: 4em 0;
-    background-color: #e9edf0;
+    background-color: #dce7ef;
 }
 
 
@@ -781,6 +1043,7 @@ PAGES : GYM FINDER PAGE
     font-size: 27px;
     text-transform: initial;
     border-bottom-width: 2px ;
+    color: #333;
 }
 
 
@@ -817,13 +1080,16 @@ PAGES : GYM FINDER PAGE
 
 .gym-card {
     position: relative;
-    width: 100%;
-    margin: 1em 0;
-    float: left;
+    width: 90%;
+    margin: 1em auto;
+    float: none;
     height: 200px;
     background-color: #101010;
     color: #fff;
     margin-bottom: 1em;
+
+    background-image: url("../../images/gym-card-default.jpg");
+    background-size: cover;
 }
 
 .gym-card  .gym-details {
@@ -833,6 +1099,8 @@ PAGES : GYM FINDER PAGE
     right: 0;
     padding: 0.5em 20px;
     font-size: 14px;
+
+    background: #000;
 }
 
 
@@ -840,6 +1108,7 @@ PAGES : GYM FINDER PAGE
     .gym-card {
         width: 47%;
         margin: 1em 1.5%;
+        float: left;
     }
 }
 
