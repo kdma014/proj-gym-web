@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Find a Talwalkars Gym near you, in your city.">
+    <meta name="description" content="Talwalkars Gym - lorem ipsum doler sit amet.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Gym Finder - Talwalkars | Gym and Fitness, India</title>
+    <title>One Day Pass - Talwalkars | Gym and Fitness, India</title>
 
     <!-- Place favicon.ico in the root directory -->
     
@@ -22,7 +22,7 @@
 
   </head>
 
-  <body class="webapp" id="gym_finder_page">
+  <body class="webapp">
 
     <!-- 
        @ Main Header and Nav 
@@ -40,7 +40,7 @@
                         <img src="assets/img/icons/menu.svg" width="22">
                     </a>
                 </div>
-    
+ 
 
                 <div class="col-md-5 col-2 d-md-flex navigation-cols">
                     <div class="navigation" id="nav_left">
@@ -84,7 +84,7 @@
                                 <!-- dropdown menu end -->
 
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="gym-finder.html">Gym Finder</a>
                             </li>
 
@@ -140,7 +140,7 @@
                 <div class="col-md-5 col-2 d-md-flex navigation-cols">
                     <div class="navigation" id="nav_left">
                         <ul class="nav nav-fill">
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" href="one-day-pass.html">One Day Pass </a>
                             </li>
                             <li class="nav-item">
@@ -201,7 +201,7 @@
 
             <ul class="nav flex-column d-none mob-nav-secondarymenu animated fadeInRight"  id="programsNavMob">
                 <li>
-                    <a href="#"><b>View all programs</b></a>
+                    <a href="programs.html"><b>View all programs</b></a>
                 </li>
                 <li>
                     <a href="#">Gym by Gym</a>
@@ -242,126 +242,71 @@
     </header> <!-- # main header end -->
 
 
-    <!--
-        @ GYM Finder Section
-        @ Search box, filter. Google Maps canvas.
+    <!-- 
+    @ One Day Pass Section Main 
     -->
-
-    <section class="section gym-finder-section" id="gymFinderSection">
+    <section class="section one-day-pass-page" id="oneDayPassBigSection" style="background-color: #000; height: 600px; color: #fff;">
+        <div class="bg-stretch bg-image" style="background-image: url('images/scott-webb.png');"></div>
         <div class="container inner">
-            
-            <header class="section-header">
-                <h1 class="section-title tr-up h2">Gym Finder</h1>
-            </header>
-
             <div class="row">
+                
                 <div class="col-md-5 col-12">
-                    <div class="gym-finder-controls">
-                        <div class="inner">
-                            <form class="gym-finder-form">
-
-                                <div class="form-block">
-                                    <div id="pac-card">
-                                        <input type="text" name="locationName" id="location_name" placeholder="Search" spellcheck="false">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-6 col-12">
-                                        <div class="form-block">
-                                            <select name="cityFilder" id="city_filder">
-                                                <option value="">FILTER BY CITY</option>
-                                                <option value="mumbai">Mumbai</option>
-                                                <option value="delhi">Delhi</option>
-                                                <option value="bangalore">Bangalore</option>
-                                                <option value="kolkata">Kolkata</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6 col-12">
-                                        <div class="form-block">
-                                            <select name="programFilder" id="program_filder">
-                                                <option value="">FILTER BY PROGRAM</option>
-                                                <option value="zumba">Zumba</option>
-                                                <option value="zorba">Zorba</option>
-                                                <option value="reduce">Reduce</option>
-                                                <option value="othrs">Others</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                    <div class="text-col" style="padding: 2em 0;">
+                        <h1 class="section-title tr-up">One Day Pass</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris lectus, rhoncus quis cursus sed, egestas ut nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sit amet leo eget lorem aliquam laoreet.  </p>
                     </div>
 
-                    <!-- List of gyms found appears here -->
-                    <div class="gyms-found">
-
-                        <!-- Gym Card -->
-                        <div class="gym-card">
-                            <div class="gym-details">
-                                <p>Talwalkars Gym - Nerul, Navi Mumbai</p>
-                            </div>
-                        </div>
-
-                        <!-- Gym Card -->
-                        <div class="gym-card">
-                            <div class="gym-details">
-                                <p>Talwalkars Gym - Nerul, Navi Mumbai</p>
-                            </div>
-                        </div>
-
-                        <!-- Gym Card -->
-                        <div class="gym-card">
-                            <div class="gym-details">
-                                <p>Talwalkars Gym - Nerul, Navi Mumbai</p>
-                            </div>
-                        </div>
-
-                        <!-- Gym Card -->
-                        <div class="gym-card">
-                            <div class="gym-details">
-                                <p>Talwalkars Gym - Nerul, Navi Mumbai</p>
-                            </div>
-                        </div>
-
-                        <!-- Gym Card -->
-                        <div class="gym-card">
-                            <div class="gym-details">
-                                <p>Talwalkars Gym - Nerul, Navi Mumbai</p>
-                            </div>
-                        </div>
-
-                        <!-- Gym Card -->
-                        <div class="gym-card">
-                            <div class="gym-details">
-                                <p>Talwalkars Gym - Nerul, Navi Mumbai</p>
-                            </div>
-                        </div>
-
-                        <!-- Gym Card -->
-                        <div class="gym-card">
-                            <div class="gym-details">
-                                <p>Talwalkars Gym - Nerul, Navi Mumbai</p>
-                            </div>
-                        </div>
+                    <div class="app-download-container" style="display: block; position: relative;">
+                        <a style="display: inline-block;" href="#appStore" class="app-download-link" id="app_ios_link">Download from AppStore</a>
+                        <a style="display: inline-block;" href="#playStore" class="app-download-link" id="app_android_link">Download from Playstore</a>
                     </div>
-
-
                 </div>
 
-                <div class="col-md-6 col-12 ml-md-auto">
-                    <p class="maps-results h5" style="padding:0.5em 0; margin-top: 1em; color: #333;"><span id="mapsResultsMsg"><b>Showing 0 results</b></span></p>
-                    <div class="map-canvas" id="gymFinderMap"></div>
+                <div class="col-md-7 col-12">
+                    <div class="img-container-od-pass" style="padding: 2em 0;">
+                        <img src="images/iPhone-7.png" class="img-fluid">
+                    </div>
                 </div>
+
             </div>
-
         </div>
     </section>
 
+    <!-- # one day pass page end -->
 
-    <!-- # Gym finder section end -->
+
+
+
+    <!-- Quick Gym Finder Section -->
+    <section class="section gym-finder-quick">
+        <div class="bg-stretch bg-image" style="background-image: url(images/nyc-map-orangeov.jpg);"></div>
+
+        <div class="container inner">
+            <h2 class="section-title">GYM FINDER</h2>
+
+            <div class="quick-finder-form">
+                <form action="gym-finder.html" name="quickGymFinderform">
+                    <input style="font-size: 2em;" type="text" name="quickGymFinder" placeholder="Search..">
+                </form>
+            </div>
+
+            <div class="quick-finder-popular">
+                <p><b>Popular Cities</b></p>
+                <a title="Talwalkars Gym in Mumbai" class="btn btn-default popular-cities-btn" href="gym-finder.html/?city=Mumbai">Mumbai</a>
+                <a title="Talwalkars Gym in Delhi" class="btn btn-default popular-cities-btn" href="gym-finder.html/?city=Delhi">Delhi</a>
+                <a title="Talwalkars Gym in Bangalore" class="btn btn-default popular-cities-btn" href="gym-finder.html/?city=Bangalore">Bangalore</a>
+                <a title="Talwalkars Gym in Kolkata" class="btn btn-default popular-cities-btn" href="gym-finder.html/?city=Kolkata">Kolkata</a>
+            </div>
+        </div>
+    </section>
+    <!-- # Quick Gym Finder Section end -->
+
+
+
+
+
+
+
 
     <!-- 
        @ Main Footer
@@ -566,27 +511,10 @@
     </footer> <!-- # main footer end -->
 
 
-
-
-
-
-
-
-
     <!-- All universal scripts and styles -->
     <link rel="stylesheet" href="assets/css/libs.css">
     <link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-
-
-    <!-- Gym Finder Styles -->
-    <style type="text/css">
-        
-        #gymFinderMap {
-            height: 600px;
-        }
-
-    </style>
 
 
     <script type="text/javascript" src="assets/js/vendor/jquery.min.js"></script>
@@ -597,11 +525,5 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
     <!-- All universal scripts and styles -->
 
-    <!-- Gym Finder JS -->
-    <script type="text/javascript" src="assets/js/gym-finder.js"></script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3IzSGgAVTcz1CzkfJycSxLASGgLLmGqI&libraries=places,geometry&callback=initMap"></script>
-
   </body>
 </html>
-

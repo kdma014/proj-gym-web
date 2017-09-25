@@ -12,14 +12,23 @@ var glob_markers = [];
 var glob_infowindows = [];
 var glob_map;
 
+
+// LatLong of popular cities for quick search
+var cities = {
+  "mumbai": {"lat": 19.0821978, "lng": 72.7410984},
+  "delhi": {"lat": 28.6466772, "lng": 76.8130671},
+  "bangalore": {"lat": 12.9538477, "lng": 77.3507377},
+  "kolkata": {"lat": 22.6757521, "lng": 88.0495299}
+};
+
+
+// Initializing the map
 function initMap() {
 
-   var map;
-   var markers = [];	
-
-   var mumbai = {lat: 18.911,lng: 72.877};
-
+   var map; var markers = [];	
    var GymMarkerIcon = "assets/img/icons/maps-and-flags.png";
+   var mumbai =  cities.mumbai;
+
 
 
   // Create the map
@@ -40,6 +49,7 @@ function initMap() {
     fillOpacity: 0.2
   });
 
+
   // To program it in the global scope
   glob_map = map;
 
@@ -59,12 +69,13 @@ function initMap() {
   });   
 
 
+
+
+
   var markers = [];
 
   searchBox.addListener('places_changed', function() {
-
     var places = searchBox.getPlaces();
-
     if (places.length == 0) {
       return;
     }
@@ -119,33 +130,7 @@ function initMap() {
   * Update Salon Location boxes on changes
   */
 
-  map.addListener("bounds_changed", function(e){
 
-    console.log("bounds changed");
-
-    var markersIdShow = [];
-
-    for (var i = _markers_arr.length - 1; i >= 0; i--) {
-      var currentMarker = _markers_arr[i];
-      if ( map.getBounds().contains( currentMarker.getPosition() ) ) {
-        markersIdShow.push( currentMarker.get("id") ) ;
-        console.log( currentMarker.get("id") + " is in bounds" );
-      }
-    }
-
-    // Show salon list items
-    show_salonList_item( markersIdShow );
-
-  });
-
-
-  // Button click to search for entered keyword
-  document.getElementById('location_search_submit').onclick = function () {
-      var _input = input;
-
-      google.maps.event.trigger(_input, 'focus')
-      google.maps.event.trigger(_input, 'keydown', { keyCode: 13 });
-  };
 
 
 }
@@ -186,10 +171,63 @@ function find_closest_marker( event ) {
     alert(map.markers[closest].title);
 }
 
+/* Query parameters in the URL */
+function get_url_params(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
+
 
 /**************************************************
-Since the number of Salons is not very big and is 
-not subject to change every now and then we can
-put the details of the locations in the JS file
-as an array filled with JSON Objects
+THIS IS THE STRUCTURE OF THE DATA FOR GYMS' EACH
+LOCATION.
 **************************************************/
+var gym_locations = [
+
+  {
+    "id"  : 0,
+    "name": "Talwalkars Gym - Nerul",
+    "programs": ["Zumba", "Zorba"],
+    "address": "Sanpada\nNavi Mumbai, Maharashtra 400705",
+    "city": "Mumbai",
+
+    "latLng": {
+      "lat": 0,
+      "lng": 0
+    },
+
+    "mapsUrl": "#google_maps_url_if_any"
+  }
+
+
+];
+
+
+/*
+The content window should look like this:
+
+<div class="contentWindowGym"><div class="talwalkars-logo"><img src="images/talwalkars_logo.png" width="72"/></div><div class="location-details">
+        
+        <h3 class="gym-name">Talwalkars Gym, Narul</h3>
+        <p class="detail-row address">
+        Kalina, Santacruz East<br>
+        Mumbai, Maharashtra 400098<br>
+        India
+        </p>
+        <p class="detail-row timings">
+            <b>9pm to 10pm</b>
+        </p>
+
+        <p> class"detail-row view-on-maps"
+            <a href="#viewonmaps">View on maps</a>
+        </p>
+
+</div></div>
+*/

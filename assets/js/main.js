@@ -191,7 +191,8 @@
     var successStoryImageOpts = {
       mode: "fade",
       hideControlOnEnd: true,
-      infiniteLoop: false,
+      infiniteLoop: true,
+      auto: true,
 
       // Hide fault next - prev
       controls: false,
@@ -209,6 +210,7 @@
 
       hideControlOnEnd: true,
       infiniteLoop: false,
+      adaptiveHeight: true,
 
       // Hide fault next - prev
       controls: true,
@@ -228,13 +230,88 @@
         // Show the new slide
         $("[data-success-image='"+ (newIndex + 1) +"']").removeClass("invisible");
 
+      },
+
+      // Show the success stories section when slider is loaded
+      onSliderLoad: function(){
+        $("#success_stories_section").css({
+          "opacity": 1,
+          "height": "initial"
+        });
       }
+
 
     };
 
     var successBxSlider = $successStorySlider.bxSlider( successStoryOpts );
 
 
+
+
+    /*------------------------------------------------------
+    * SINGLE PROGRAM PAGE
+    ------------------------------------------------------*/
+
+    /*
+    * Program Cards Slider - only for screens smaller than
+    */
+
+    var cardsSliderOpts = {
+      controls: false
+    };
+
+    var program_cards_slider = program_cards_slider = $(".p-cards-slider").bxSlider(cardsSliderOpts);
+
+
+  
+
+    if ( window.innerWidth < 1010 ) {
+      program_cards_slider.reloadSlider();
+    }
+    else {
+      // program_cards_slider.destroySlider();
+    }
+
+
+    if ( $(".p-cards-slider").length > 0 ) {
+
+      $(window).on("resize", function(e){
+        // Program Cards Slide
+        if ( $(this).width() > 1010 ) {
+            program_cards_slider.destroySlider();
+        }
+
+        else if ( $(this).width() < 1010 ) {
+            program_cards_slider.reloadSlider();
+        }
+
+        else {
+          // do nothing
+        }
+      });
+    }
+
+
+    /*
+    * Benefits Styles 
+    */
+
+    var benenfitSliderOpts = {
+      controls: false
+    };
+    var benefits_items_slider = $(".benefits-list.slider").bxSlider( benenfitSliderOpts );
+
+  
+
+    if ( $(".benefits-list.slider").length > 0 ) {
+      if ( $(window).width() < 768 ) {
+        benefits_items_slider.reloadSlider();
+      }
+
+      else {
+        benefits_items_slider.destroySlider();
+      }
+    }
 
 
 

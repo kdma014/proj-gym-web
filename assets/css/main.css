@@ -105,6 +105,16 @@ html, body {
  }
 
 
+/* Text color */
+.text-light {
+    color: #fff;
+}
+
+.text-dark {
+    color: #111;
+}
+
+
 
 
 /*
@@ -658,6 +668,10 @@ PAGES : Home Page / Non-Members
     position: relative;
     width: 300px;
     height: 368px;
+
+    width: 375px;
+    height: 460px;
+
     margin-left: auto;
     margin-right: auto;
 }
@@ -677,9 +691,9 @@ PAGES : Home Page / Non-Members
     z-index: 1;
 
 
-    -webkit-transition: 0.5s all ease-in-out;
-    -moz-transition: 0.5s all ease-in-out;
-    transition: 0.5s all ease-in-out;
+    -webkit-transition: 1s all ease-in-out;
+    -moz-transition: 1s all ease-in-out;
+    transition: 1s all ease-in-out;
 }
 
 .slide-success-story.invisible {
@@ -754,6 +768,125 @@ PAGES : Home Page / Non-Members
 
 
 
+/*
+* One Day Pass Section
+*/
+
+/* image col */
+.ODPass-image-col {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.ODPass-image-col .floatODiPhone img {
+
+}
+
+.one-day-pass-section .ODPass-text-col {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.one-day-pass-section .ODPass-text-col > h3,
+.one-day-pass-section .ODPass-text-col > p  {
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.one-day-pass-section .ODPass-text-col .know-more {
+    margin-top: 2em;
+    text-align: right;
+    margin-left: auto;
+}
+
+.one-day-pass-section .ODPass-text-col .know-more a {
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* App Download Links */
+
+
+.app-download-container {
+    display: flex;
+
+    justify-content: baseline;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-basis: auto;
+    flex-flow: column;
+    
+    padding-top: 3em;
+
+}
+
+.app-download-container .app-download-link {
+    border-radius: 5px;
+
+    display: block;
+    width: 125px;
+    height: 37px;
+    padding: 5px 20px;
+    margin: 10px 10px;
+
+    overflow: hidden;
+    font-size: 0;
+    color: #fff;
+
+    /* Background graphics */
+    background-image: url("../img/bgs/playss.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+#app_ios_link {
+    background-image: url("../img/bgs/appstore.png");
+}
+
+@media (min-width: 768px) {
+
+    .ODPass-image-col {
+        position: relative;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        align-items: initial;
+    }
+
+
+    .one-day-pass-section .ODPass-text-col {
+        text-align: right;
+    }
+
+    .one-day-pass-section .ODPass-text-col .know-more a {
+        width: 150px;
+        display: block;
+        margin: 0;
+        margin-left: auto;
+
+    }
+
+
+    .app-download-container {
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: row;
+        flex-basis: auto;
+        flex-flow: row;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
 
 
 
@@ -861,6 +994,317 @@ PAGES : Home Page / Non-Members
         text-align: right;
     }
 }
+
+
+/*-------------------------------------------------------------
+PAGES : SINGLE PROGRAM PAGE
+--------------------------------------------------------------*/
+
+/*
+* Main Hero Section
+*/
+
+
+.hero-section {
+    display: flex;
+}
+
+
+.hero-section .text-col {
+    text-transform: uppercase;
+    padding-top: 2em;
+    text-align: center;
+
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-section .action-btn {
+    width: 100%;
+}
+
+.hero-section .action-btn a.btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.75em 1em;
+    width: 80%;
+}
+
+
+@media (min-width: 768px) {
+    .hero-section .text-col {
+        padding-top: 4em;
+        text-align: right;
+
+        height: initial;
+        display: block;
+    }
+
+
+    .hero-section .action-btn a.btn {
+        margin-top: 2em;
+        padding: 0.5em 1em;
+        width: 220px;
+        margin-left: auto;
+        margin-right: initial;
+    }
+}
+
+
+/*
+* Program Cards / component can be used on other pages as well
+*/
+
+
+.program-cards-container {
+    display: block;
+}
+
+@media (min-width: 1010px) {
+    .program-cards-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.program-card {
+    position: relative;
+    max-width: 100%;
+    width: 300px;
+    height: 350px;
+    margin: 20px auto;
+
+    border: 0px solid transparent;
+    background-color: #000;
+    color: #fff;
+
+    background-image: url("../../images/programs/p-cards-running-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.program-card .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 20px 20px;
+    background-color: rgba(0,0,0,0.6);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.program-card .p-card-header {
+    width: 100%;
+}
+
+.p-card-title-small {
+
+}
+
+.program-card .p-action-btns {
+    width: 100%;
+    text-align: center;
+}
+
+.program-card .p-action-btns  a.p-action-btn {
+    display: block;
+    border: 2px solid #fff;
+    margin: 10px auto;
+    padding: 0.5rem 0.75em;
+    width: 80%;
+
+    background-color: ;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 150px;
+
+    -webkit-transition: 0.1s all ease-in-out;
+    -moz-transition: 0.1s all ease-in-out;
+    transition: 0.1s all ease-in-out;
+}
+
+.program-card .p-action-btns  a.p-action-btn:hover,
+.program-card .p-action-btns  a.p-action-btn:focus,
+.program-card .p-action-btns  a.p-action-btn.buy-membership {
+    background-color: #fff;
+    color: #111;
+}
+
+
+.program-card .p-action-btns > a.buy-membership {
+    background-color: #fff;
+    color: #111;
+}
+
+
+/* Slider Styles */
+
+.programs-section .bx-wrapper {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+
+
+.programs-section   .bx-wrapper .bx-pager-item {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.programs-section   .bx-wrapper .bx-pager.bx-default-pager a {
+    background: #fff;
+    text-indent: -99999px;
+    display: block;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+
+    color: #fff;
+    opacity: 0.4;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+.programs-section  .bx-wrapper .bx-pager.bx-default-pager a.active, 
+.programs-section  .bx-wrapper .bx-pager.bx-default-pager a:focus, 
+.programs-section  .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background-color: #fff;
+    opacity: 1;
+}
+
+
+
+
+
+/*
+* Benefit Section and Benefits list
+*/
+
+
+
+.program-benefits-section {
+    padding: 2em 0;
+    color: #fff;
+}
+
+
+
+/* Benefits List */
+.benefits-list .benefit-item {
+    margin-bottom: 2em;
+}
+
+.benefit-item .media {
+    display: block;
+}
+
+.benefit-item .media .media-body {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.benefit-item .media .media-body h4 {
+    text-transform: uppercase;
+}
+
+.benefit-item .benefit-item-img {
+    margin-right: auto;
+    margin-left: auto;
+
+    display: block;
+}
+
+
+@media (min-width: 768px) {
+    .program-benefits-section {
+        padding: 4em 0;
+        padding-bottom: 0;
+        color: #fff;
+    }
+
+    .benefit-item .media {
+        display: flex;
+    }
+
+    .benefit-item .media .media-body {
+        margin-top: 0rem;
+        text-align: left;
+    }
+
+    .benefit-item .benefit-item-img {
+        margin-right: 2rem;
+        margin-left: auto;
+
+        display: block;
+    }
+}
+
+
+
+/* Slider Styles */
+.program-benefits-section .bx-wrapper {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+
+
+.program-benefits-section .bx-wrapper .bx-pager-item {
+    font-size: 14px;
+    line-height: 1;
+}
+.program-benefits-section  .bx-wrapper .bx-pager.bx-default-pager a {
+    background: #fff;
+    text-indent: -99999px;
+    display: block;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+
+    color: #fff;
+    opacity: 0.4;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+.program-benefits-section  .bx-wrapper .bx-pager.bx-default-pager a.active, 
+.program-benefits-section  .bx-wrapper .bx-pager.bx-default-pager a:focus, 
+.program-benefits-section  .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background-color: #fff;
+    opacity: 1;
+}
+
+
+
+
+
+
 
 
 
