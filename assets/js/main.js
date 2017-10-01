@@ -197,7 +197,7 @@
       // Hide fault next - prev
       controls: false,
       pager: true,
-      pagerType: "full",
+      pagerType: "full"
     };
 
     var successImageBxSlider = $successStoryImageSliders.bxSlider( successStoryImageOpts );
@@ -245,7 +245,29 @@
 
     var successBxSlider = $successStorySlider.bxSlider( successStoryOpts );
 
+    /*------------------------------------------------------
+    * LANDING PAGE
+    ------------------------------------------------------*/
 
+    /*
+    * Landing page hero slider
+    */
+
+    var $landingPageSlider = $("#gymHistorySlider");
+
+    var landingPageSliderOpts = {
+      hideControlOnEnd: true,
+      infiniteLoop: true,
+      auto: true,
+
+      // Hide fault next - prev
+      controls: false,
+      pager: true,
+      pagerType: "full",
+      pagerCustom: "#lading_slider_pager"
+    };
+
+    var landingPageBxSlider = $landingPageSlider.bxSlider( landingPageSliderOpts );
 
 
     /*------------------------------------------------------

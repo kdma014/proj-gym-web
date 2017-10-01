@@ -68,6 +68,13 @@ function initMap() {
       searchBox.setBounds( map.getBounds() );
   });   
 
+  // Cancel submit event
+  google.maps.event.addDomListener(input, "keydown", function(){
+    if (event.keyCode === 13 && $('.pac-container:visible').length) { 
+      event.preventDefault(); 
+    }
+  });
+
 
 
 

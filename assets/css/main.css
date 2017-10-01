@@ -762,9 +762,186 @@ PAGES : Home Page / Non-Members
 
 
 
+/*
+* Landing Page Slider
+*/
+
+
+#gymHistorySlider {
+    margin: 0;
+    padding: 0;
+}
+
+
+.gym-history-container .slide-content {
+    height: 600px;
+    padding: 4em 20px;
+    color: #fff;
+}
+
+
+.gym-history-container .slide-content h2,
+.gym-history-container .slide-content p {
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.gym-history-container .slide-content .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.gym-history-container .bx-wrapper {
+    margin-bottom: 0px;
+    background-color: transparent;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0 transparent;
+}
+
+.gym-history-container  .bx-wrapper .bx-pager-item {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.gym-history-container  .bx-wrapper .bx-pager.bx-default-pager a {
+    background: transparent;
+    text-indent: 0px;
+    display: block;
+    width: 25px;
+    height: initial;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+
+    color: #fff;
+    opacity: 0.6;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+.gym-history-container .bx-wrapper .bx-pager.bx-default-pager a.active, 
+.gym-history-container .bx-wrapper .bx-pager.bx-default-pager a:focus, 
+.gym-history-container .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background-color: transparent;
+    opacity: 1;
+}
+
+
+/* Custom Pager for Desktop */
+
+
+.pager-landing-page {
+    position: absolute;
+    bottom: 2em;
+    right: 0;
+    left: 0;
+
+    max-width: 768px;
+    margin: 0 auto;
+
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+}
 
 
 
+.pager-landing-page > a {
+    position: relative;
+    display: inline-block;
+    padding: 0.5em 1em; 
+    margin: 0.5em auto;
+    background-color: #d51919;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    width: 72px;
+    text-align: center;
+    border-radius: 5px;
+
+    box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+
+    background-color: #111;
+}
+
+
+.pager-landing-page > a.active, 
+.pager-landing-page > a:hover {
+    opacity: 1;
+    background-color: #d51919;
+}
+
+
+
+@media (min-width: 768px) {
+    .pager-landing-page {
+        display: flex;
+    }
+
+    .pager-landing-page::before {
+        width: 100%;
+        height: 5px;
+        background-color: #fff;
+        content: "";
+        position: absolute;
+        top: 50%;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+    }   
+}
+
+
+
+/*
+* Landing Page Site Area Sections
+*/
+
+.area-sections > .row {
+    display: flex;
+    justify-content: center;
+}
+
+.area-sections .bg-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.area-sections .site-section-col {
+    color: #fff;
+    margin: 0 auto;
+    max-width: 350px;
+    justify-content: center;
+}
+
+.site-area-link {
+    width: 180px;
+}
+
+.site-area-link#signIn {
+    background-color: #d51919;
+    color: #fff;
+}
+
+.site-area-link#signIn:hover {
+    color: #d51919;
+    background-color: #fff;
+}
 
 
 
@@ -1276,6 +1453,8 @@ PAGES : SINGLE PROGRAM PAGE
     font-size: 14px;
     line-height: 1;
 }
+
+
 .program-benefits-section  .bx-wrapper .bx-pager.bx-default-pager a {
     background: #fff;
     text-indent: -99999px;
@@ -1304,6 +1483,101 @@ PAGES : SINGLE PROGRAM PAGE
 
 
 
+
+/*-------------------------------------------------------------
+PAGES : ALL PROGRAMS PAGE
+--------------------------------------------------------------*/
+
+.program-list-item {
+    position: relative;
+    max-width: 480px;
+    height: 280px;
+    margin: 2.5em 1em;
+    padding: 1em 2em;
+    background-color: #d51919;
+    color: #fff;
+    overflow: hidden;
+}
+
+
+.program-item-img {
+    position: absolute;
+    top: -3em;
+    left: -3em;
+}
+
+.program-item-img.right-aligned {
+    top: initial;
+    left: initial;
+    right: -3em;
+    top: -3em;
+}
+
+.program-item-img .img-container {
+
+}
+
+.program-item-img .img-container img {
+    max-width: 180px;
+}
+
+
+.program-item-btns {
+    position: absolute;
+    bottom: 1em;
+    left: 2em;
+
+
+    max-width: 320px;
+    width: 180px;
+
+    z-index: 1;
+}
+
+.program-item-btns.right-aligned {
+    left: initial;
+    right: 2em;
+}
+
+.program-item-btns .btn.btn-default {
+    display: block;
+    width: 100%;
+    margin: 0.5em 0;
+    font-size: 14px;
+
+    background-color: #d51919;
+    border-color: #fff;
+    border-width: 2px;
+    text-transform: uppercase;
+}
+
+.program-item-btns .btn.btn-default:hover {
+    color: #fff;
+}
+
+
+.program-item-btns div:last-child .btn.btn-default {
+    background-color: #fff;
+    color: #d51919;
+}
+
+
+
+
+@media (min-width: 768px) {
+
+    .program-list-item {
+        overflow: initial;
+    }
+
+    .program-item-img .img-container img {
+        max-width: 240px;
+    } 
+
+    .program-item-btns {
+        z-index: initial;
+    }
+}
 
 
 
