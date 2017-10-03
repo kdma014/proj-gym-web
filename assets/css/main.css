@@ -65,7 +65,8 @@ textarea {
 
 ============================================================================= */
 html, body {
-    font-family: "Helvetica", "Open Sans", "Helvetica", sans-serif;
+    font-family: "Circular-std", "Helvetica", "Open Sans", "Helvetica", sans-serif;
+    font-weight: normal;
     background-color: #eee;
 }
 
@@ -184,6 +185,11 @@ select {
 
 
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5 {
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+}
+
 
 
 /*------------------------------------
@@ -254,7 +260,7 @@ Main Header and Navbar
 }
 
 .main-header .navigation > ul > li > .nav-link {
-    font-family: "Helvetica";
+    font-family: "Circular-std", "Helvetica";
     color: #fff;
     line-height: 18px;
 
@@ -379,7 +385,6 @@ Main Header and Navbar
 
 
 #mobileMenuDropdown .nav li {
-    font-family: "Sintony-Regular";
     font-size: 25px;
     text-align: center;
     padding: 0 0 39px 0;
@@ -904,6 +909,157 @@ PAGES : Home Page / Non-Members
 
 
 /*
+* Gym History BB Slider Styles
+*/
+
+#gym-history-bb {
+    width: 100%;
+    height: 460px;
+}
+
+
+.gym-history-bb-item {
+    background-color: #000;
+    background-image: url("../../images/oldgym.jpg");
+    background-size: cover;
+}
+
+
+/* Gym BB Inner */
+.gym-bb-inner {
+    background-color: #000;
+    background-image: url("../../images/oldgym.jpg");
+    background-size: cover;
+
+    height: 460px;
+}
+
+.gym-bb-inner .container {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.bb-gym-text {
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    color: #fff;
+    left: 0;
+    right: 0;
+    z-index: 996;
+
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+.oldgym-img {
+    height: 100%;
+    width: auto;
+}
+
+
+.pabs {
+    position: absolute;
+    z-index: 996;
+}
+
+.gym-bb-pagination {
+    position: absolute;
+    bottom: 0;
+    z-index: 996;
+    right: 0;
+    left: 0;
+
+    text-align: center;
+
+    max-width: 640px;
+    margin: 1em auto;
+}
+
+.gym-bb-pagination .links {
+    display: block;
+    justify-content: space-around;
+}
+
+.bb-gym-history-link {
+    position: relative;
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.5em auto;
+    background-color: #d51919;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    width: 72px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+    background-color: #111;
+
+    opacity: 1;
+
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+}
+
+.bb-gym-history-link:hover,
+.bb-gym-history-link:active,
+.bb-gym-history-link:focus {
+    opacity: 1;
+    background-color: #d51919;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+@media (min-width: 768px) {
+    #gym-history-bb {
+        width: 100%;
+        height: 630px;
+        overflow: initial;
+    }
+
+    .gym-bb-inner {
+        height: 630px;
+    }
+
+    .bb-gym-text {
+        padding-top: 4em;
+        padding-bottom: 4em;
+        background-color: rgba(0,0,0,0);
+    }
+
+
+    .gym-bb-pagination .links {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .gym-bb-pagination::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin-top: -2px; 
+
+        margin-left: 1em;
+        margin-right: 1em;
+
+        max-width: 600px;
+    }
+}
+
+
+
+
+/*
 * Landing Page Site Area Sections
 */
 
@@ -1060,7 +1216,7 @@ PAGES : Home Page / Non-Members
         flex-flow: row;
 
         position: absolute;
-        bottom: 0;
+        bottom: 20px;
         right: 0;
     }
 }
@@ -1481,7 +1637,329 @@ PAGES : SINGLE PROGRAM PAGE
 
 
 
+/*-------------------------------------------------------------
+PAGES : GYM BY TALWALKARS PAGE
+--------------------------------------------------------------*/
 
+/*
+* Main Carousel on GYM Page 
+*/
+
+
+.gym-main-slider {
+
+}
+
+.gym-main-slider .gym-slide-item {
+    color: #fff;
+    padding: 4em 0;
+}
+
+.gym-main-slider .owl-dots {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .gym-main-slider .owl-dots {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -30px;
+        z-index: 1;
+    }
+
+}
+
+
+/* Slide Stripe at Bottom, can be used on other large hero image slides as well */
+
+.slide-info-stripe {
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.slide-info {
+    position: relative;
+    color: #ff6829;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0;
+}
+
+.slide-info p {
+    margin: 0;
+}
+
+.slide-info .slide-info-block {
+    margin-right: 10px;
+}
+
+
+
+/*
+* Programs Offered Slider
+*/
+
+.pr-offered-slider-container {
+
+}
+
+
+.pr-offered-slider-container {
+    margin-top: 1em;
+}
+
+
+.pr-offered-slider-container .bx-wrapper {
+    margin-bottom: 30px;
+    background-color: transparent;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0 transparent;
+}
+
+.pr-offered-slider-container  .bx-wrapper .bx-pager-item {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.pr-offered-slider-container  .bx-wrapper .bx-pager.bx-default-pager a {
+    background: transparent;
+    text-indent: 0px;
+    display: block;
+    width: 25px;
+    height: initial;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+
+    color: #fff;
+    opacity: 0.6;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+.pr-offered-slider-container .bx-wrapper .bx-pager.bx-default-pager a.active, 
+.pr-offered-slider-container .bx-wrapper .bx-pager.bx-default-pager a:focus, 
+.pr-offered-slider-container .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background-color: transparent;
+    opacity: 1;
+}
+
+
+/* Custom Pager for Programs Offered slider */
+.custom-bx-pager {
+    font-size: 14px;
+}
+
+.custom-bx-pager a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#pr_offered_bxPager a {
+    display: inline-block;
+    opacity: 0.5;
+    width: 25px;
+
+    -webkit-transition: 0.1s all ease-in-out;
+    -moz-transition: 0.1s all ease-in-out;
+    transition: 0.1s all ease-in-out;
+}
+
+#pr_offered_bxPager a.active,
+#pr_offered_bxPager a:hover,
+#pr_offered_bxPager a:focus {
+    opacity: 1;
+}
+
+
+
+
+/* Programs Offered Cards */
+
+.pr-offered-cards {
+    position: relative;
+    background-color: #111;
+    padding: 20px;
+    margin: 2em 20px;
+
+    height: 300px;
+
+    overflow: hidden;
+}
+
+.pr-offered-cards .text-col {
+    z-index: 1;
+    position: relative;
+}
+
+.pr-offered-cards .float-program-img {
+    z-index: 0;
+    position: absolute;
+    right: -50px;
+    top: -10px;
+    bottom: 0;
+    max-height: 100%;
+}
+
+.pr-offered-cards .float-program-img .img-container {
+    height: 300px;
+}
+
+.pr-offered-cards .float-program-img img {
+    max-width: 100%;
+    width: auto;
+    height: 100%;
+}
+
+
+.pr-offered-cards .buttons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+
+    z-index: 1;
+}
+
+.pr-offered-cards .buttons a.btn {
+    display: block;
+    margin: 0 0;
+    margin-top: 1em;
+    text-transform: uppercase;
+    border-width: 2px;
+    font-size: 14px;
+}
+
+.pr-offered-cards .buttons a.btn.btn-inverted {
+    background-color: transparent;
+    color: #ff6829;
+    border-color: #ff6829;
+    background-color: #111;
+}
+
+
+@media (min-width: 768px) {
+    .pr-offered-cards {
+        padding: 20px;
+        margin: 2em 4em;
+        height: 300px;
+        overflow: initial;
+    }
+
+    .pr-offered-cards .buttons {
+        max-width: 180px;
+    }
+}
+
+
+
+/*
+* Services Offered Section - GYM Page
+*/
+
+
+
+.gym-services-list {
+    max-width: 480px;
+    text-align: center;
+}
+
+.gym-service-item {
+    display: inline-block;
+    width: 110px;
+    height: 130px;
+
+    vertical-align: top;
+    text-align: center;
+
+}
+
+.gym-service-item .service-item-icon {
+    background-color: #000;
+    text-align: center;
+
+    width: 72px;
+    height: 72px;
+    line-height: 72px;
+    border-radius: 50%;
+
+    margin: 0 auto;
+}
+
+.gym-service-item .service-item-icon > img {
+    width: 36px;
+    height: 36px;
+}
+
+.gym-service-item .service-item-title {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .gym-services-list {
+        text-align: left;
+    }
+}
+
+
+/*
+* Membership Plans Section on Gym Page
+*/
+
+
+
+#membershipPlansList  {
+    list-style-type: none;
+    padding: 2em 0;
+
+    max-width: 440px;
+}
+
+#membershipPlansList li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 0;
+}
+
+
+#membershipPlansList li .membership-btn {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    font-size: 12px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    opacity: 0.8;
+
+    -webkit-transition: 0.1s all ease-in-out;
+    -moz-transition: 0.1s all ease-in-out;
+    transition: 0.1s all ease-in-out;
+    margin-left: 20px;
+    min-width: 140px;
+    text-align: center;
+}
+
+
+#membershipPlansList li .membership-btn:hover {
+    opacity: 1;
+}
 
 
 /*-------------------------------------------------------------
@@ -1960,6 +2438,88 @@ PAGES : SIGN-IN PAGE
 }
 
 
+/*-------------------------------------------------------------
+COMPONENTS: WATERWHEEL CAROUSEL FOR GYM OFFERS
+--------------------------------------------------------------*/
+.gym-offers-section {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+
+.gym-offers-section .col-text {
+    text-align: center;
+}
+
+.gym-offers-waterwheel {
+    height: 270px;
+    max-width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    clear: both;
+}
+
+.gym-offers-waterwheel img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.gym-offer-carousel-pager {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+
+.page-dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 0.5em;
+    background-color: #fff;
+    opacity: 0.7;
+    border-radius: 50%;
+    transition: 0.1s all ease-in-out;
+    cursor: pointer;
+}
+
+.page-dots span.active,
+.page-dots span:hover {
+    background-color: #fff;
+    opacity: 1;
+
+    transform: scale(1.4);
+}
+
+
+@media (min-width: 768px) {
+    .gym-offers-section {
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
+
+    .gym-offers-section .col-text {
+        text-align: right;
+    }
+
+    .gym-offers-waterwheel {
+        height: 300px;
+        max-width: 380px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        clear: both;
+    }   
+
+
+    
+}
 
 /*-------------------------------------------------------------
 MAIN FOOTER
@@ -1990,7 +2550,6 @@ MAIN FOOTER
 
 /* Footer Links Panel */
 .footer-links-panel {
-    font-family: "Open Sans";
     padding: 2em 0;
 }
 
@@ -2440,3 +2999,11 @@ Universal Responsive Breakpoints
         page-break-after: avoid;
     }
 }
+
+
+
+
+
+
+
+

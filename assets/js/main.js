@@ -282,18 +282,16 @@
       controls: false
     };
 
-    var program_cards_slider = program_cards_slider = $(".p-cards-slider").bxSlider(cardsSliderOpts);
+    var program_cards_slider = $(".p-cards-slider").bxSlider(cardsSliderOpts);
 
-
-  
-
-    if ( window.innerWidth < 1010 ) {
-      program_cards_slider.reloadSlider();
+    if ( program_cards_slider.destroySlider ) {
+        if ( window.innerWidth < 1010 ) {
+          program_cards_slider.reloadSlider();
+        }
+        else {
+            program_cards_slider.destroySlider();
+        }
     }
-    else {
-      // program_cards_slider.destroySlider();
-    }
-
 
     if ( $(".p-cards-slider").length > 0 ) {
 
@@ -321,9 +319,8 @@
     var benenfitSliderOpts = {
       controls: false
     };
+    
     var benefits_items_slider = $(".benefits-list.slider").bxSlider( benenfitSliderOpts );
-
-  
 
     if ( $(".benefits-list.slider").length > 0 ) {
       if ( $(window).width() < 768 ) {
@@ -334,6 +331,99 @@
         benefits_items_slider.destroySlider();
       }
     }
+
+
+    /*------------------------------------------------------
+    * GYM PAGE
+    ------------------------------------------------------*/  
+
+    /*
+    * Gym Page Slider
+    */
+
+    var $gymPageCarouselSlider = $("#gym_page_slider");
+    var gymPageCarouselMain = $gymPageCarouselSlider.owlCarousel({
+      autoplay: true,
+      autoplayTimeout: 3500,
+      autoplayHoverPause: true,
+      margin: 0,
+      nav: false,
+      dots:true, 
+      items: 1,
+      loop: false,
+      responsive:{
+          0:{
+              items:1
+          },
+
+          600:{
+              items:1
+          },
+
+          1000:{
+              items:1
+          }
+      }
+    });
+
+
+
+    gymPageCarouselMain.on("changed.owl.carousel", function(e){
+        var $animatingElems = $(e.relatedTarget.$element).find("[data-animation ^= 'animated']");
+        doAnimations( $animatingElems );
+    });
+
+
+    /* Programs Offered Carousel on Gym page */
+    var prOfferedCustomPager = "#pr_offered_bxPager";
+
+    $("#programsOffered_slide > li").each(function(e){
+      var newPagerItem = '<a data-slide-index="'+ e +'" href="">' + (e+1) + '</a>';
+      $(prOfferedCustomPager).append( newPagerItem );
+    });
+
+
+    var $programOfferedSliders = $("#programsOffered_slide");
+    var programOfferedOpts = {
+      
+      hideControlOnEnd: true,
+      infiniteLoop: false,
+      adaptiveHeight: true,
+
+      // Hide fault next - prev
+      controls: true,
+      pager: true,
+      pagerType: "full",
+
+      // Next - Prev
+      nextSelector: '#pr_offered_next_slide',
+      prevSelector: '#pr_offered_prev_slide',
+      pagerCustom: prOfferedCustomPager,
+
+
+      onSlideAfter: function( $slideElement, oldIndex, newIndex ){
+        // Hide the old slide
+        var oldElm = $("[data-programs-offered='"+ (oldIndex + 1) +"']").addClass("hidden");
+            oldElm.addClass("hidden");
+
+        // Show the new slide
+        var newElm = $("[data-programs-offered='"+ (newIndex + 1) +"']").removeClass("hidden");
+            newElm.removeClass("hidden");
+
+      },
+
+      
+      onSliderLoad: function(){
+        $(".pr-offered-section").css({
+          "opacity": 1,
+          "height": "initial"
+        });
+      }
+    };
+
+    var programOfferedBxSlider = $programOfferedSliders.bxSlider( programOfferedOpts );
+
+
 
 
 
@@ -439,9 +529,30 @@
 
 
 
+    /*------------------------------------------------------
+    * WATERWHEEL CAROUSEL - GYM OFFERS
+    ------------------------------------------------------*/
+    var gym_offer_carousel = $("#gym_offers_waterwheel");
+
+    var gymOfferCarousel = gym_offer_carousel.waterwheelCarousel({
+      flankingItems: 3,
+      autoPlay : 3000,
+      dots: true,
+      horizonOffset : 0,
+      separation: 78,
+      sizeMultiplier: 0.9,
+      captionBelow: true
+    });
 
 
 
+    $("#gymOfferPrev").on("click touch", function(){
+      gymOfferCarousel.prev();
+    });
+
+    $("#gymOfferNext").on("click touch", function(){
+      gymOfferCarousel.next();
+    });
 
 
 
