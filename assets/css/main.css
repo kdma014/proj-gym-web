@@ -65,12 +65,10 @@ textarea {
 
 ============================================================================= */
 html, body {
-    font-family: "Sintony", "Helvetica", "Open Sans", "Helvetica", sans-serif;
+    font-family: "Montserrat", "Helvetica", "Open Sans", "Helvetica", sans-serif;
     font-weight: normal;
     font-size: 14px;
     background-color: #eee;
-
-
 }
 
 
@@ -282,6 +280,10 @@ Main Header and Navbar
 .main-header .navigation .nav-link.active,
 .main-header .navigation .nav-item.active .nav-link  {
     border-bottom-color: #d51919;
+}
+
+.main-header .navigation .nav-item.active .nav-link {
+    font-weight: bold;
 }
 
 .main-header .navigation .sign-in .nav-link:hover,
