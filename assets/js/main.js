@@ -342,6 +342,13 @@
     */
 
     var $gymPageCarouselSlider = $("#gym_page_slider");
+    $gymPageCarouselSlider.on("initialized.owl.carousel", function(){
+      $("#gyms_slider_section").animate({
+        "opacity": 1 
+      }).css({
+        "height": "initial"
+      });
+    });
     var gymPageCarouselMain = $gymPageCarouselSlider.owlCarousel({
       autoplay: true,
       autoplayTimeout: 3500,
@@ -425,6 +432,59 @@
 
 
 
+    /*
+    * Gym Page Photo Gallery Sliders 
+    */
+
+    // Image Gallery Slider #1
+    var $photo_slider_1 = $("#photo_gallery_1");
+
+    $photo_slider_1.on("initialized.owl.carousel", function(e){
+      $(".photo-gallery-section").css({
+        "height": "initial"
+      }).animate({
+        "opacity": 1
+      });
+    });
+
+    var photo_slider_1_owl = $photo_slider_1.owlCarousel({
+      items: 1,
+      dots: true,
+
+      // animation effect
+      animateOut: 'slideOutLeft',
+      animateIn: 'flipInY',
+
+      // Show carousel container on load
+
+    });
+
+
+    // Image Gallery Slider #1
+    var $photo_slider_2 = $("#photo_gallery_2");
+
+    $photo_slider_2.on("initialized.owl.carousel", function(e){
+      $(".photo-gallery-section").css({
+        "height": "initial"
+      }).animate({
+        "opacity": 1
+      });
+    });
+
+    var photo_slider_2_owl = $photo_slider_2.owlCarousel({
+      items: 2,
+      dots: false,
+      nav: true,
+
+      // animation effect
+      animateOut: 'slideOutLeft',
+      animateIn: 'flipInY'
+
+      // Show carousel container on load
+
+    });
+
+    
 
 
 
@@ -621,3 +681,10 @@ function doAnimations( elems ) {
     });
   });
 }
+
+
+
+/* Modernizr Test for Mix-Blend-Mode */
+Modernizr.addTest('mix-blend-mode', function(){
+    return Modernizr.testProp('mixBlendMode');
+});

@@ -65,9 +65,12 @@ textarea {
 
 ============================================================================= */
 html, body {
-    font-family: "Circular-std", "Helvetica", "Open Sans", "Helvetica", sans-serif;
+    font-family: "Sintony", "Helvetica", "Open Sans", "Helvetica", sans-serif;
     font-weight: normal;
+    font-size: 14px;
     background-color: #eee;
+
+
 }
 
 
@@ -260,7 +263,7 @@ Main Header and Navbar
 }
 
 .main-header .navigation > ul > li > .nav-link {
-    font-family: "Circular-std", "Helvetica";
+    font-family: "Sintony", "Helvetica", Arial, sans-serif;
     color: #fff;
     line-height: 18px;
 
@@ -1938,7 +1941,9 @@ PAGES : GYM BY TALWALKARS PAGE
     padding: 0.5em 0;
 }
 
-
+#membershipPlansList li > p {
+    margin-bottom: 0;
+}
 #membershipPlansList li .membership-btn {
     color: #fff;
     border: 2px solid #fff;
@@ -1960,6 +1965,92 @@ PAGES : GYM BY TALWALKARS PAGE
 #membershipPlansList li .membership-btn:hover {
     opacity: 1;
 }
+
+
+/*
+* Photo Gallery Section 
+*/
+
+.photo-gallery-section {}
+.photo-gallery-section .photo-gallery-col {
+    display: flex;
+    align-items: center;
+}
+
+.photo-gallery-slider .owl-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.photo-gallery-slider .owl-dots > div {
+    display: inline-block;
+}
+
+
+.photo-gallery-slider .owl-nav {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    bottom: 20px;
+
+    text-align: center;
+}
+
+.photo-gallery-slider .owl-nav .owl-prev, 
+.photo-gallery-slider .owl-nav .owl-next {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 0%;
+    margin: 0 10px;
+    font-size: 0px;
+    border-radius: 50%;
+    background: url(../img/icons/up-button.svg) no-repeat center;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    -webkit-transition: 0.1s all ease-in-out;
+    -moz-transition: 0.1s all ease-in-out;
+    transition: 0.1s all ease-in-out;
+}
+
+
+.photo-gallery-slider .owl-nav .disabled {
+    opacity: 0.2;
+}
+
+
+.photo-gallery-slider .owl-nav .owl-prev {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.photo-gallery-slider .owl-nav .owl-next {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+/* Image Mix-Blend-Mode Overlay Divs */
+.photo-gallery-item .ov {
+    display: none;
+    background-color: transparent;
+    mix-blend-mode: multiply;
+}
+
+.mix-blend-mode .photo-gallery-item .ov {
+    display: block;
+}
+
+.photo-gallery-item .ov.red { background-color: #d51919; }
+.photo-gallery-item .ov.orange { background-color: #ff6829; }
+
+
+
 
 
 /*-------------------------------------------------------------

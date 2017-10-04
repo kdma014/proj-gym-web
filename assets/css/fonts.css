@@ -1,12 +1,4 @@
 
-/* Sintony Regular */
-@font-face {
-    font-family: Sintony-Regular;
-    src: url(../fonts/sintony-regular/Sintony-Regular.otf);
-}
-
-
-
 
 
 /*-------------------------------------
@@ -113,7 +105,7 @@ Oswald
 /******************************************************
 Circular Std
 *******************************************************/
-@font-face {
+/* @font-face {
     font-family: 'Circular-Std';
     src: url('../fonts/circular-std/CircularStd-Book.otf') format('opentype');
     font-weight: normal;
@@ -152,4 +144,32 @@ Circular Std
     src: url('../fonts/circular-std/CircularStd-BoldItalic.otf') format('opentype');
     font-weight: bold;
     font-style: italic;
+} */
+
+
+/********************************************
+Sintony Regular and Bold
+********************************************/
+@font-face {
+    font-family: 'Sintony';
+    src: url('../fonts/sintony/Sintony-Bold-webfont.eot');
+    src: url('../fonts/sintony/Sintony-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sintony/Sintony-Bold-webfont.woff') format('woff'),
+         url('../fonts/sintony/Sintony-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/sintony/Sintony-Bold-webfont.svg#sintonybold') format('svg');
+    font-weight: bold;
+    font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'Sintony';
+    src: url('../fonts/sintony/Sintony-Regular-webfont.eot');
+    src: url('../fonts/sintony/Sintony-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sintony/Sintony-Regular-webfont.woff') format('woff'),
+         url('../fonts/sintony/Sintony-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/sintony/Sintony-Regular-webfont.svg#sintonyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
