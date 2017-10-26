@@ -2602,12 +2602,31 @@ COMPONENTS: WATERWHEEL CAROUSEL FOR GYM OFFERS
     cursor: pointer;
 }
 
+.page-dots span.active {
+    transform: scale(1.4);
+}
 .page-dots span.active,
 .page-dots span:hover {
-    background-color: #fff;
     opacity: 1;
+}
 
-    transform: scale(1.4);
+
+.page-dots span#gymOfferPrev, 
+.page-dots span#gymOfferNext {
+    color: transparent;
+    height: 0;
+    display: inline-block;
+}
+
+.page-dots span#gymOfferPrev::after, 
+.page-dots span#gymOfferNext::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    color: #fff;
+}
+
+.page-dots span#gymOfferPrev::after {
+    content: "\f104";
 }
 
 
