@@ -2527,19 +2527,19 @@ PAGES : SIGN-IN PAGE
 
 /* placeholder on sign-in input */
 .sign-in-box form .form-row input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,1);
   letter-spacing: 0;
 }
 .sign-in-box form .form-row input::-moz-placeholder { /* Firefox 19+ */
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,1);
   letter-spacing: 0;
 }
 .sign-in-box form .form-row input:-ms-input-placeholder { /* IE 10+ */
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,1);
   letter-spacing: 0;
 }
 .sign-in-box form .form-row input:-moz-placeholder { /* Firefox 18- */
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,1);
   letter-spacing: 0;
 }
 
