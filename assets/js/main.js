@@ -452,8 +452,8 @@
       dots: true,
 
       // animation effect
-      animateOut: 'slideOutLeft',
-      animateIn: 'flipInY',
+      // animateOut: 'slideOutLeft',
+      // animateIn: 'flipInY',
 
       // Show carousel container on load
 
