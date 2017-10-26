@@ -326,6 +326,7 @@ Main Header and Navbar
 }
 .main-header .navigation .dropdown-menu.boxed-dropdown .nav .nav-item .nav-link {
     font-size: 14px;
+    font-family: "Sintony", "Helvetica", Arial, sans-serif;
     color: #fff;
     text-align: left;
 }
