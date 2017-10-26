@@ -2705,7 +2705,7 @@ MAIN FOOTER
 .footer-links-panel .links-col .nav li a {
     display: block;
     font-size: 14px;
-    text-transform: uppercase;
+    text-transform: normal;
     text-decoration: none;
     padding: 5px 0;
     opacity: 0.8;
