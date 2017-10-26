@@ -1309,7 +1309,7 @@ PAGES : Home Page / Non-Members
 .track-fitness-section {
     background-image: url("../../images/slides/section-track_480.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     background-size: cover;
     height: 480px;
 
@@ -1325,6 +1325,7 @@ PAGES : Home Page / Non-Members
 
 .track-fitness-section .text-content {
     text-align: center;
+    margin: 0 auto;
 }
 
 .track-fitness-section .text-content h3 {
