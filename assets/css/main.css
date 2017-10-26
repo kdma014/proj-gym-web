@@ -283,7 +283,7 @@ Main Header and Navbar
 }
 
 .main-header .navigation .nav-item.active .nav-link {
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .main-header .navigation .sign-in .nav-link:hover,
