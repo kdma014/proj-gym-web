@@ -2322,7 +2322,7 @@ PAGES : GYM FINDER PAGE
 
 .gym-finder-section {
     padding: 4em 0;
-    background-color: #dce7ef;
+    background-color: #fff;
 }
 
 
@@ -2340,13 +2340,30 @@ PAGES : GYM FINDER PAGE
 .gym-finder-controls .form-block select {
     width: 100%;
     max-width: 100%;
-    text-transform: uppercase;
-    color: #777;
+    text-transform: none;
+    color: #111;
+    border-bottom-color: #111;
 }
 
 .gym-finder-controls .form-block select {
-    font-weight: 600;
+    font-weight: 400;
+    border-bottom-color: #111;
 }
+
+
+.gym-finder-controls .form-block input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #111;
+}
+.gym-finder-controls .form-block input::-moz-placeholder { /* Firefox 19+ */
+  color: #111;
+}
+.gym-finder-controls .form-block input:-ms-input-placeholder { /* IE 10+ */
+  color: #111;
+}
+.gym-finder-controls .form-block input:-moz-placeholder { /* Firefox 18- */
+  color: #111;
+}
+
 
 /* Large location input */
 #location_name {
@@ -2411,6 +2428,10 @@ PAGES : GYM FINDER PAGE
     font-size: 14px;
 
     background: #000;
+}
+
+.gym-card  .gym-details p {
+    margin-bottom: 0;
 }
 
 
