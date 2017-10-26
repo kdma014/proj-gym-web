@@ -139,6 +139,8 @@ html, body {
     background-color: #ff6829;
     border-radius: 50px;
     padding: 0.5rem 0.75rem;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 .btn.btn-default:hover {
@@ -258,6 +260,15 @@ Main Header and Navbar
 
 .main-header .navigation .nav .nav-item {
     align-self: flex-end;
+}
+
+.main-header .navigation .nav .nav-item.sign-in {}
+.main-header .navigation .nav .nav-item.sign-in img {
+    max-height: 16px;
+    vertical-align: middle;
+}
+.main-header .navigation .nav .nav-item.sign-in span {
+    vertical-align: middle;
 }
 
 .main-header .navigation > ul > li > .nav-link {
