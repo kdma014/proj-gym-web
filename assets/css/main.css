@@ -2708,7 +2708,7 @@ MAIN FOOTER
     text-transform: normal;
     text-decoration: none;
     padding: 5px 0;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     vertical-align: middle;
 }
 
