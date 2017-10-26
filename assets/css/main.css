@@ -1382,6 +1382,15 @@ PAGES : SINGLE PROGRAM PAGE
     width: 80%;
 }
 
+.talwalkars-history {
+    color: #fff;
+}
+
+.talwalkars-history .about-talwalkars {
+    margin-bottom: 0;
+}
+
+
 
 @media (min-width: 768px) {
     .hero-section .text-col {
