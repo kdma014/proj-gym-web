@@ -2215,12 +2215,17 @@ PAGES : CONTACT PAGE
     padding: 0px 0;
 }
 
+.contact-form .form-row .input-field {
+    width: 100%;
+}
 
 .contact-form .form-row .input-field input,
 .contact-form .form-row .input-field select,
 .contact-form .form-row .input-field textarea {
-    font-size: 19px;
-    width: 310px;
+    font-size: 14px;
+    min-width: 100%;
+    width: 100%;
+
 }
 
 .contact-form .form-row textarea {
@@ -2261,8 +2266,8 @@ PAGES : CONTACT PAGE
 
 .contact-form .form-row .input-field label {
     position: absolute;
-    top: 14px;
-    font-size: 13px;
+    top: 5px;
+    font-size: 12px;
     color: #444;
 
     -webkit-transition: 0.1s all ease-in-out;
@@ -2273,8 +2278,8 @@ PAGES : CONTACT PAGE
 .contact-form .form-row .input-field textarea:focus + label,
 .contact-form .form-row .input-field select:focus + label,
 .contact-form .form-row.input--filled .input-field  label {
-    font-size: 13px;
-    top: -14px;
+    font-size: 12px;
+    top: -16px;
 }
 
 
@@ -2297,6 +2302,7 @@ PAGES : CONTACT PAGE
   border: 2px solid #ff6829;
   background-color: #fff;  
   color: #ff6829;
+  margin-left: 0;
 }
 
 
