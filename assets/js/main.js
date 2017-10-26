@@ -210,7 +210,7 @@
 
       hideControlOnEnd: true,
       infiniteLoop: false,
-      adaptiveHeight: true,
+      adaptiveHeight: false,
 
       // Hide fault next - prev
       controls: true,
