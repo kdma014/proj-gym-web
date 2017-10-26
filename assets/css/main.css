@@ -2766,6 +2766,12 @@ MAIN FOOTER
 }
 
 
+/* Footer Logo */
+.footer-logo {
+    display: none;
+}
+
+
 
 
 @media (min-width: 768px) {
