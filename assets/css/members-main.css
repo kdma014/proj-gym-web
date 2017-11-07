@@ -1,0 +1,155 @@
+/*-----------------------------------------------
+STYLESHEET FOR TALWALKARS GYM'S MEMBERS AREA
+NOT FOR RE-USE. 
+------------------------------------------------*/
+
+
+
+/*
+* COVER IMAGE HEADER
+*/
+
+.members-cover-header {
+    position: relative;
+    /*height: 150px;*/
+
+    color: #fff;
+}
+
+.members-cover-header .inner {
+	position: relative;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+
+.member-avatar-col {
+    text-align: center;
+    color: #d51919;
+}
+
+.member-avatar-col .member-avatar {
+    position: relative;
+    top: 0;
+    color: #d51919;
+}
+
+.member-avatar-col .avatar-container {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    width: 120px;
+    height: 120px;
+    border: 0px solid #fff;
+    border-radius: 50%;
+}
+
+.member-avatar-col .avatar-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.member-level-col, 
+.member-edit-col {
+	text-align: left;
+	margin-bottom: 1em;
+}
+.member-edit-col {
+	text-align: center;
+}
+
+
+@media (min-width: 768px) {
+	.member-avatar-col .member-avatar {
+		position: relative;
+		top: 9.5em;
+		margin-top: -5em;
+		z-index: 1;
+	}
+
+	.member-level-col, 
+	.member-edit-col {
+		text-align: left;
+		margin-bottom: 1em;
+		left: 0;
+		top: 0;
+	}
+	.member-edit-col {
+		text-align: right;
+		right: 0;
+	}
+
+}
+
+
+/*
+* MEMBERS'S PAGE NAVIGATION
+*/
+
+
+nav.members-area-nav {
+	position: relative;
+	padding-top: 0px;
+	background-color: #fff;
+	box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+
+.sub-menu {
+	justify-content: space-between !important;
+}
+
+.sub-menu .nav-item .nav-link  {
+	color: #333;
+	border-bottom: 3px solid #d51919;
+	border-bottom-color: transparent;
+	transition: 0.2s all ease-in-out;
+}
+
+.sub-menu .nav-item.active .nav-link,
+.sub-menu .nav-item .nav-link.active,
+.sub-menu .nav-item:hover .nav-link {
+	border-bottom-color: #d51919;
+}
+
+
+@media (min-width: 768px) {
+	nav.members-area-nav {
+	    padding-top: 60px;
+    }
+}
+
+
+/*
+* MEMBER AREA CONTENT AREA: SIDEBAR AND MAIN CONTENT 
+*/
+
+.main-content {
+	background-color: #dde5ef;
+}
+
+.main-content > .inner {
+	padding: 2em 20px;
+	margin-bottom: 2em;
+}
+
+
+.main-content .col {
+	min-height: 600px;
+}
+
+.main-content .col .sidebar-inner,
+.main-content .col .content-inner {
+	display: block;
+	background-color: #fff;
+	height: 100%;
+}
+
+
+
+@media (min-width: 768px) {
+	nav.members-area-nav {
+	    padding-top: 60px;
+    }
+}
+
+

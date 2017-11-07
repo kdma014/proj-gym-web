@@ -60,7 +60,13 @@ function initMap() {
   var input = document.getElementById('location_name');
   var searchBox =  new google.maps.places.SearchBox(input);
 
-  var autocomplete = new google.maps.places.Autocomplete(input);
+  var autocomplete = new google.maps.places.Autocomplete(
+    input,
+    {
+     types: ['(cities)'],
+     componentRestrictions: {country: "in"}
+    }
+  );
       autocomplete.bindTo('bounds', map);
 
   // Bias the SearchBox results towards current map's viewport.
