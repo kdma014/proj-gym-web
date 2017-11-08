@@ -2,6 +2,177 @@
 STYLESHEET FOR TALWALKARS GYM'S MEMBERS AREA
 NOT FOR RE-USE. 
 ------------------------------------------------*/
+/*
+* Hide Global Sign-in links when in member pages
+*/
+
+.members-area #mobSignInLink {
+	display: none;
+}
+
+
+
+/*
+* COMMON STYLES FOR COMPONENTS
+*/
+
+/* Colored text */
+.red {
+	color: #d51919;
+}
+
+.orange {
+	color: #ff6829;
+}
+
+.grey, .gray {
+	color: #777;
+}
+
+/* Media box  */
+
+.detail-media-box {
+	padding: 0px 0;
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.detail-media-box .avatar {
+	width: 100px;
+	min-width: 100px;
+	max-width: 100px;
+	min-height: 100px;
+	max-height: 100px;
+	border: 1px solid #ccc;
+	margin-bottom: 0px;
+
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.detail-media-box .avatar img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.detail-media-box .text {
+	margin: 0.5em 0;
+	text-align: center;
+}
+
+
+@media (min-width: 768px) {
+	.detail-media-box {
+		flex-direction: row;
+	}
+	.detail-media-box .avatar {
+		margin-right: 20px;
+		margin-bottom: 0;
+	}
+
+	.detail-media-box .text {
+		text-align: left;
+	}
+}
+
+/* Data Box */
+.data-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.data-boxes .data-box {
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+
+.data-boxes .data-box > .inner {
+  text-align: center;
+  width: 140px;
+  padding: 10px 10px;
+}
+
+
+/* Statistics Grid */
+.grid-container {
+  display: grid;
+  grid-gap: 0px;
+}
+
+.grid-container .grid-item {
+  padding: 10px 10px;
+  border: 2px solid #eee;
+  text-align: center;
+  
+}
+
+.grid-container .grid-item-1 {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  
+  border-top: 0;
+  border-left: 0;
+}
+
+.grid-container .grid-item-2 {
+  grid-column: 2 / 2;
+  grid-row: 1;
+  
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.grid-container .grid-item-3 {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+
+.grid-container .grid-item-4 {
+  grid-column: 2 / 2;
+  grid-row: 2;
+  
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+
+
+
+.statistics-grid {
+	color: #333;
+}
+.statistics-grid .stat-title {}
+.statistics-grid .stat-data {
+	color: #ff6829;
+}
+
+/* Progress Pie */
+.progress-pie {
+	width: 100%;
+	margin: 40px auto;
+	margin-bottom: 40px;
+}
+
+.progress-pie > canvas {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
 
 
 
@@ -41,10 +212,12 @@ NOT FOR RE-USE.
     height: 120px;
     border: 0px solid #fff;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .member-avatar-col .avatar-container img {
     max-width: 100%;
+    min-width: 100%;
     height: auto;
 }
 
@@ -54,8 +227,25 @@ NOT FOR RE-USE.
 	text-align: left;
 	margin-bottom: 1em;
 }
+
 .member-edit-col {
-	text-align: center;
+	/* text-align: center; */
+	position: absolute;
+	right: 0;
+	text-align: right;
+}
+
+.member-edit-col .btn {
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 50px;
+	text-transform: uppercase;
+	min-width: 100px;
+	opacity: 0.8;
+}
+
+.member-edit-col .btn:hover {
+	opacity: 1;
 }
 
 
@@ -75,6 +265,8 @@ NOT FOR RE-USE.
 		top: 0;
 	}
 	.member-edit-col {
+		position: relative;
+		right: initial;
 		text-align: right;
 		right: 0;
 	}
@@ -95,6 +287,8 @@ nav.members-area-nav {
 }
 
 .sub-menu {
+	position: relative;
+	z-index: 1;
 	justify-content: space-between !important;
 }
 
@@ -128,28 +322,155 @@ nav.members-area-nav {
 }
 
 .main-content > .inner {
-	padding: 2em 20px;
-	margin-bottom: 2em;
+	padding: 40px 20px;
+	padding-bottom: 4em;
+}
+
+.main-content .inner .col {
+	min-height: 500px;
+	margin-bottom: 20px;
 }
 
 
-.main-content .col {
-	min-height: 600px;
+
+.main-content .inner .col .scroll-content {
+	margin-right: 0px;
+	overflow-y: auto;
 }
+
+
+.main-content .inner .col .scroll-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.0);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.main-content .inner .col .scroll-content::-webkit-scrollbar {
+    width: 7px;
+    background-color: transparent;
+}
+
+.main-content .inner .col .scroll-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,.0);
+    background-color: #6669;
+}
+
+
 
 .main-content .col .sidebar-inner,
 .main-content .col .content-inner {
+	position: relative;
 	display: block;
+	padding: 40px 20px;
 	background-color: #fff;
 	height: 100%;
+
+	border-radius: 4px;
 }
 
 
+.main-content .col .content-inner {
+	padding: 40px 40px;
+}
+
+
+.main-content .col .content-inner .edit-area-button {
+	position: absolute;
+	right: 40px;
+	top: 40px;
+	opacity: 0.5;
+}
+
+.main-content .col .content-inner .edit-area-button:hover {
+	opacity: 0.8;
+}
 
 @media (min-width: 768px) {
 	nav.members-area-nav {
 	    padding-top: 60px;
     }
+
+    .main-content .inner .col .scroll-content {
+    	margin-right: 40px;
+    }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------
+STYLES ABOVE ARE FOR COMMON ELEMENTS AVAILABLE
+ON ALL PAGES OF THE MEMBERS AREA. 
+
+THE STYLES THAT FOLLOWS ARE FOR SPECIFIC COMPONENTS
+ONLY AND OVERRIDES ANY STYLES ABOVE.
+----------------------------------------------------*/
+
+/*
+* COMPONENT: Workout List 
+*/
+
+.workout-list {
+	margin: 20px 0;
+}
+
+.workout-list ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.workout-list ul li {
+	display: inline-block;
+	text-align: center;
+	margin: 20px 0;
+	margin-top: 0;
+	margin-right: 20px;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+
+}
+
+.workout-list ul li > img {
+	display: block;
+	max-height: 0 auto;
+	margin-bottom: 10px;
+
+	min-width: 80px;
+	min-height: 80px;
+}
+
+.workout-list ul li .name {
+	color: #d51919;
+}
+
+@media (min-width: 768px) {
+	.workout-list ul li > img {
+		min-width: 100px;
+		min-height: 100px;
+	}
+
+}
 
