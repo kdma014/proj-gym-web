@@ -1,19 +1,21 @@
 Non-Member (When the user is not logged in)
-   index.html
-   contact.html
-   gym.html
-   news.html
-   non-members.html
-   one-day.html
-   sign-in.html
+   ./index.html
+   ./contact.html
+   ./gym.html
+   ./news.html
+   ./non-members.html
+   ./one-day.html
+   ./sign-in.html
 
 
 Members 
-   index__member.html
-   contact__member.html
-   gym__member.html
-   news__member.html
-   one-day__member.html
+   ./members-homepage.html
+   ./members-goal.html
+   ./members-calendar.html
+   ./members-track.html
+   ./members-gym-buddies.html
+   ./members-invite.html
+   ./members-profile.html
 
 
    
