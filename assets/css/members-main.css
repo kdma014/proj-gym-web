@@ -386,6 +386,11 @@ nav.members-area-nav {
 	opacity: 0.8;
 }
 
+/* Content section titles */
+.section-title {
+	text-transform: uppercase;
+}
+
 @media (min-width: 768px) {
 	nav.members-area-nav {
 	    padding-top: 60px;
