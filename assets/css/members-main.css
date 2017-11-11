@@ -11,19 +11,27 @@ NOT FOR RE-USE.
 }
 
 
-
 /*
 * COMMON STYLES FOR COMPONENTS
 */
 
 /* Colored text */
+.secondary {
+	color: #ff6829;
+}
+
 .red {
 	color: #d51919;
 }
 
 .orange {
-	color: #ff6829;
+	color: #ff6f29;
 }
+
+.green {
+	color: #9bda2a;
+}
+
 
 .grey, .gray {
 	color: #777;
@@ -79,6 +87,39 @@ NOT FOR RE-USE.
 }
 
 /* Data Box */
+
+.data-box {
+  min-height: 120px;
+  border: 2px solid #dde5ef9e;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+
+.data-box > .inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  text-align: center;
+  max-width: 140px;
+  min-width: 140px;
+  padding: 10px 10px;
+}
+
+.data-box > .inner .title {
+	display: inline-block;
+	margin-bottom: 0.25em;
+}
+
+
+
 .data-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -88,7 +129,7 @@ NOT FOR RE-USE.
 
 
 .data-boxes .data-box {
-  border: 1px solid #eee;
+  border: 2px solid #dde5ef9e;
   border-radius: 4px;
 }
 
@@ -157,7 +198,7 @@ NOT FOR RE-USE.
 }
 .statistics-grid .stat-title {}
 .statistics-grid .stat-data {
-	color: #ff6829;
+	color: #ff6f29;
 }
 
 /* Progress Pie */
@@ -336,6 +377,7 @@ nav.members-area-nav {
 .main-content .inner .col .scroll-content {
 	margin-right: 0px;
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 
@@ -347,6 +389,7 @@ nav.members-area-nav {
 
 .main-content .inner .col .scroll-content::-webkit-scrollbar {
     width: 7px;
+    height: 4px;
     background-color: transparent;
 }
 
@@ -479,3 +522,91 @@ ONLY AND OVERRIDES ANY STYLES ABOVE.
 
 }
 
+
+/*
+* COMPONENT: Goals Chart * Meter
+*/
+
+
+.goals-chart {
+	margin: 20px 0;
+	padding: 20px 0;
+
+	margin-bottom: 0;
+}
+
+.goals-chart .goal-item .inner {
+	padding-bottom: 20px;
+}
+
+.goals-chart .goal-item p {
+	font-size: 1em;
+	margin: 0.5em 0;
+}
+
+.goals-chart .goal-item .goal-item-title {
+	margin: 0;
+	color: #ff6f29;
+}
+
+
+
+
+
+.goals-progress-meter {
+
+}
+
+.goals-progress-meter > .row {
+	padding: 0;
+	padding-bottom: 20px;
+}
+
+.goals-progress-meter > .row > div {
+	align-items: center;
+}
+
+.goals-progress-meter .progress-title {
+	min-width: 90px;
+	margin: 0px 0;
+}
+.goals-progress-meter .progress-bar-container {
+	width: 100%;
+}
+
+.progress-bar-container .progress {
+	position: relative;
+	border-radius: 10px;
+}
+
+.progress-bar-container .progress .progress-bar {
+	position: relative;
+	font-size: 1rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+
+	background-color: #333;
+	overflow: hidden;
+}
+
+.progress-bar-container .progress .progress-bar span {
+	position: relative;
+}
+
+.progress-bar-container .progress .progress-bar::before {
+	content:"";
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4ec51+0,429321+100 */
+background: rgb(180,236,81); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(180,236,81,1) 0%, rgba(66,147,33,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(180,236,81,1) 0%,rgba(66,147,33,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(180,236,81,1) 0%,rgba(66,147,33,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ec51', endColorstr='#429321',GradientType=1 ); /* IE6-9 */
+
+}

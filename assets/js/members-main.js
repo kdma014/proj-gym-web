@@ -81,7 +81,7 @@ function progressPie( canvas, progress ) {
 
 		// The inner circle is a full circle, nothing special about it
 		ctx.beginPath();
-		ctx.arc(cx, cy, radius - 20, 0, 2 * Math.PI, false);
+		ctx.arc(cx, cy, radius - 10, 0, 2 * Math.PI, false);
 		ctx.fillStyle = '#dde5ef';
 		ctx.fill();
 
