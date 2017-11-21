@@ -92,6 +92,7 @@ NOT FOR RE-USE.
   min-height: 120px;
   border: 2px solid #dde5ef9e;
   border-radius: 4px;
+  margin-bottom: 20px;
 
   display: flex;
   align-items: center;
@@ -451,6 +452,102 @@ nav.members-area-nav {
 
 
 
+/*
+* PAGE: Invite Page
+*/
+
+/* Search Box */
+
+
+.search-input-container {
+    position: relative;
+    margin: 20px 0;
+
+}
+.search-input-container input[type="text"] {
+    padding-right: 40px;
+}
+
+.search-input-container .search-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    text-indent: -9999999px;
+    overflow: hidden;
+
+    background-image: url(../img/icons/magnifying-glass.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+
+    opacity: 0.4;
+    transition: 0.2s all ease-in-out;
+}
+
+
+.search-input-container:hover .search-icon,
+.search-input-container input[type="text"]:focus ~ .input-icon .search-icon {
+    opacity: 1;
+}
+
+
+/* Members Invite Search Box and List of invites */
+
+
+.members-invited-container {
+	margin: 20px 0;
+	margin-right: -15px;
+	padding-right: 15px;
+	overflow-x: auto;
+
+	height: 460px;
+	overflow: auto;
+}
+
+.member-invited-item {
+    display: flex;
+    background-color: #111;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.member-invited-item .member-detail {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    padding: 0px 0;
+}
+
+.member-invited-item .member-detail .member-name-level {
+	padding: 10px;
+	font-size: 0.9em;
+}
+
+.member-invited-item .member-detail.challenge-invite {
+    width: 100%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+}
+
+.member-invited-item .member-detail .challenge-invite > button {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    background-color: #d51919;
+    border: 0;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
 
 
 
@@ -609,4 +706,99 @@ background: -webkit-linear-gradient(left, rgba(180,236,81,1) 0%,rgba(66,147,33,1
 background: linear-gradient(to right, rgba(180,236,81,1) 0%,rgba(66,147,33,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ec51', endColorstr='#429321',GradientType=1 ); /* IE6-9 */
 
+}
+
+
+/*
+* A Better Form Container
+* 
+*/
+
+/* form container */
+
+.form-container {
+    padding: 20px 0;
+}
+
+.form-container .form-row {
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    padding: 0px 0;
+}
+
+.form-container .form-row .input-field {
+    width: 100%;
+}
+
+.form-container .form-row .input-field label {
+    font-size: 85%;
+    position: relative;
+    margin: 0;
+    color: #999;
+    font-weight: 400;
+}
+
+/* floating label */
+.form-container .form-row .input-field.floating-label label {
+    position: absolute;
+    top: 5px;
+    font-size: 16px;
+    color: #999;
+    transition: 0.1s all ease-in-out;
+}
+
+.form-container .form-row .input-field.floating-label  input:focus + label,
+.form-container .form-row .input-field.floating-label  textarea:focus + label,
+.form-container .form-row.input--filled .input-field.floating-label label  {
+    font-size: 12px;
+    top: -1rem;
+}
+
+
+.form-container .form-row .btn.btn-default {
+    border: 2px solid transparent;
+    width: 100%;
+    margin: 1em auto;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+.form-container .form-row .btn.btn-default:hover,
+.form-container .form-row .btn.btn-default:focus {
+    border: 2px solid #ff6829;
+}
+
+
+@media (min-width: 768px) {
+	.form-container .form-row .btn.btn-default {
+		min-width: 200px;
+		max-width: 500px;
+		width: initial;
+		margin: 1em 0;
+	}
+}
+
+
+
+/*
+* Custom Scroll Bar
+*/
+
+.custom-scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.0);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 7px;
+    height: 4px;
+    background-color: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,.0);
+    background-color: #6669;
 }

@@ -24,12 +24,140 @@ $(document).ready(function(){
 
 
 
+	// Form Container - Floating Labels
+	$(".form-container .form-row .input-field.floating-label input, .form-container .form-row .input-field.floating-label select").on("change", function(){
+
+	      if ( $(this).val().length > 0 ) {
+	        $(this).parent().parent(".form-row").addClass("input--filled");
+	      }
+
+	      else {
+	        $(this).parent().parent(".form-row").removeClass("input--filled");
+	      }
+
+	});
+
+
+
+	/*
+	* PAGE: Members Invite
+	*/
+
+	/* Search Invites */
+	var memberInvites;
+	$.ajax({
+		url: "./assets/js/dummy-data/member-invite.json",
+		success: function( data){
+			memberInvites = data;
+			console.log( data );
+
+			// Populate the box
+			var all_member_boxes = "";
+
+			for ( var i = 0; i < data.length; i++ ) {
+				var member_invite_item = `
+				<div class="member-invited-item">
+				    <div class="member-avatar">
+				        <img src="${data[i].avatar}" width="100" height="100">
+				    </div>
+				    <div class="member-detail">
+				        <div class="padding-top member-name-level">
+				            <span class="name">${data[i].name}</span>
+				            <br>
+				            <span class="level">${data[i].level[1]}</span>
+				        </div>
+				        <div class="challenge-invite">
+				            <button>Challenge</button>
+				        </div>
+				    </div>
+				</div> 
+				`;
+
+				all_member_boxes += member_invite_item;
+			}
+
+			$(".members-invited-container").append( all_member_boxes );
+		}
+	});
+
+
+	$("#search_invite_query").on("change keydown keyup", function(){
+		
+		var query = $(this).val();
+
+		if ( query.length === 0 ) {
+			query = " ";
+		} else {
+			query = query;
+		}
+
+		var member_items = "";
+
+		// Search options
+		var searchOpts = {
+			shouldSort: true,
+			threshold: 0.2,
+			location: 0,
+			distance: 100,
+			maxPatternLength: 32,
+			minMatchCharLength: 5,
+			keys: [{
+				name: "name", 
+				weight: 0.3
+			}]
+		};
+
+		var fuse = new Fuse(memberInvites, searchOpts);
+		var result = fuse.search( query );
+
+
+		// Add the result to the view
+		$(".members-invited-container").html( "" );
+
+		if ( result.length === 0 ) {
+			$(".members-invited-container").append("<p>Sorry! No invites were found with that name.<br>Please try another name.</p>");
+		}
+
+		else {
+			for ( var i = 0; i < result.length; i++ ) {
+				var member_invite_item = `
+				<div class="member-invited-item animated">
+				    <div class="member-avatar">
+				        <img src="${result[i].avatar}" width="100" height="100">
+				    </div>
+				    <div class="member-detail">
+				        <div class="padding-top member-name-level">
+				            <span class="name">${result[i].name}</span>
+				            <br>
+				            <span class="level">${result[i].level[1]}</span>
+				        </div>
+				        <div class="challenge-invite">
+				            <button>Challenge</button>
+				        </div>
+				    </div>
+				</div> 
+				`;
+
+				member_items += member_invite_item;
+			}
+			
+			$(".members-invited-container").append( member_items );
+		}
+	});
+	
+
+	
+
+
 
 });
 
 
 
-
+/*
+* To Load Member Invites JSON Data and make search function possible on it
+* for PAGE: MEMBER INVITE
+*/
 
 
 

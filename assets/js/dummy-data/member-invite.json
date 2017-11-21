@@ -1,0 +1,72 @@
+
+	[
+        {
+        	"name": "Anup Sharma",
+        	"level": ["1", "Intermediate"],
+        	"avatar": "./images/members/avatars/member-avatar-copy.png",
+        	"challenge": 0
+        },
+
+        {
+        	"name": "Anuj Prajapati",
+        	"level": ["1", "Intermediate"],
+        	"avatar": "./images/members/avatars/member-avatar-copy.png",
+        	"challenge": 0
+        },
+
+        {
+        	"name": "Anish Jain",
+        	"level": ["1", "Intermediate"],
+        	"avatar": "./images/members/avatars/member-avatar-copy.png",
+        	"challenge": 0
+        },
+
+        {
+        	"name": "Kaushik Panchal",
+        	"level": ["1", "Intermediate"],
+        	"avatar": "./images/members/avatars/member-avatar-copy.png",
+        	"challenge": 0
+        },
+
+        {
+        	"name": "Kaushik Prajapati",
+        	"level": ["1", "Intermediate"],
+        	"avatar": "./images/members/avatars/member-avatar-copy.png",
+        	"challenge": 0
+        },
+
+        {
+        	"name": "Manish Rao",
+        	"level": ["1", "Intermediate"],
+        	"avatar": "./images/members/avatars/member-avatar-copy.png",
+        	"challenge": 0
+        },
+
+        {
+        	"name": "Manu Sharma",
+        	"level": ["1", "Intermediate"],
+        	"avatar": "./images/members/avatars/member-avatar-copy.png",
+        	"challenge": 0
+        },
+
+        {
+        	"name": "Manu Sharma",
+        	"level": ["1", "Intermediate"],
+        	"avatar": "./images/members/avatars/member-avatar-copy.png",
+        	"challenge": 0
+        },
+
+        {
+        	"name": "Manu Sharma",
+        	"level": ["1", "Intermediate"],
+        	"avatar": "./images/members/avatars/member-avatar-copy.png",
+        	"challenge": 0
+        },
+
+        {
+        	"name": "Manu Sharma",
+        	"level": ["1", "Intermediate"],
+        	"avatar": "./images/members/avatars/member-avatar-copy.png",
+        	"challenge": 0
+        }
+    ]
