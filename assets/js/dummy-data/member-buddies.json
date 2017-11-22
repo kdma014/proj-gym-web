@@ -1,0 +1,183 @@
+[
+	{
+		"id" : "1",
+		"name": {
+			"first": "Anup",
+			"last" : "Sharma"
+		},
+
+		"avatar": "./images/members/avatars/anup_buddy.jpg",
+		"url": "#example"
+	},
+
+	{
+		"id" : "2",
+		"name": {
+			"first": "Kaushik",
+			"last" : "Panchal"
+		},
+
+		"avatar": "./images/members/avatars/kaushik_buddy.jpg",
+		"url": "#example"
+	},
+
+
+	{
+		"id" : "3",
+		"name": {
+			"first": "Anna",
+			"last" : "Kolk"
+		},
+
+		"avatar": "./images/members/avatars/anna_buddy.jpg",
+		"url": "#example"
+	},
+
+
+	{
+		"id" : "4",
+		"name": {
+			"first": "Anish",
+			"last" : "Jain"
+		},
+
+		"avatar": "./images/members/avatars/anish_buddy.jpg",
+		"url": "#example"
+	},
+
+
+	{
+		"id" : "5",
+		"name": {
+			"first": "Moses",
+			"last" : "Fernandez"
+		},
+
+		"avatar": "./images/members/avatars/member-avatar-1.png",
+		"url": "#example"
+	},
+
+
+	{
+		"id" : "6",
+		"name": {
+			"first": "Anuj",
+			"last" : "Prajapati"
+		},
+
+		"avatar": "./images/members/avatars/member-avatar-1.png",
+		"url": "#example"
+	},
+
+
+	{
+		"id" : "7",
+		"name": {
+			"first": "Nikash",
+			"last" : "Sharma"
+		},
+
+		"avatar": "./images/members/avatars/nikash_buddy.jpg",
+		"url": "#example"
+	},
+
+
+	{
+		"id" : "8",
+		"name": {
+			"first": "Kelsey",
+			"last" : "Layme"
+		},
+
+		"avatar": "./images/members/avatars/kelsey_buddy.jpg",
+		"url": "#example"
+	},
+
+	{
+		"id" : "9",
+		"name": {
+			"first": "Sambit",
+			"last" : "Chaudhary"
+		},
+
+		"avatar": "./images/members/avatars/sambit_buddy.jpg",
+		"url": "#example"
+	},
+
+	{
+		"id" : "10",
+		"name": {
+			"first": "Rohit",
+			"last" : "Anand"
+		},
+
+		"avatar": "./images/members/avatars/member-avatar-1.png",
+		"url": "#example"
+	},
+
+	{
+		"id" : "11",
+		"name": {
+			"first": "Siddhartha",
+			"last" : "Mukherjee"
+		},
+
+		"avatar": "./images/members/avatars/siddhartha_buddy.jpg",
+		"url": "#example"
+	},
+
+	{
+		"id" : "12",
+		"name": {
+			"first": "Aditi",
+			"last" : "Aggarwal"
+		},
+
+		"avatar": "./images/members/avatars/member-avatar-1.png",
+		"url": "#example"
+	},
+
+	{
+		"id" : "13",
+		"name": {
+			"first": "Rahul",
+			"last" : "Jain"
+		},
+
+		"avatar": "./images/members/avatars/member-avatar-1.png",
+		"url": "#example"
+	},
+
+	{
+		"id" : "14",
+		"name": {
+			"first": "Priyank",
+			"last" : "Keshav"
+		},
+
+		"avatar": "./images/members/avatars/member-avatar-1.png",
+		"url": "#example"
+	},
+
+	{
+		"id" : "15",
+		"name": {
+			"first": "Jade",
+			"last" : "Whiteson"
+		},
+
+		"avatar": "./images/members/avatars/member-avatar-1.png",
+		"url": "#example"
+	},
+
+	{
+		"id" : "16",
+		"name": {
+			"first": "Rituraj",
+			"last" : "Ghai"
+		},
+
+		"avatar": "./images/members/avatars/member-avatar-1.png",
+		"url": "#example"
+	}
+]

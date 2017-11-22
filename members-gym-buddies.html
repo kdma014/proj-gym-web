@@ -1,0 +1,449 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Talwalkars Gym - lorem ipsum doler sit amet.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Gym Buddies - Members | Talwalkars Gym</title>
+
+    <!-- Place favicon.ico in the root directory -->
+    
+    <!-- Styles & Important Fonts -->
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/bs/v4/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Stylesheet specific to the Members section -->
+    <link rel="stylesheet" href="./assets/css/members-main.css">
+
+    <!-- Scripts -->
+    <script src="./assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+  </head>
+
+  <body class="webapp members-area" id="members_gym_buddies_page">
+
+
+
+    <!-- Members Area Container -->
+    <div class="members-area">
+
+        <!-- Cover image, -->
+        <header class="members-cover-header">
+            <div class="bg-image bg-stretch" style="background-image: url('./images/members/members-header-cover.jpg');"></div>
+            <div class="container inner">
+                <div class="row">
+                    <div class="col-md-3 col-12 member-level-col">
+                        <div class="member-level">
+                            <h3>Level</h3>
+                            <h2>Beginner</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 member-avatar-col">
+                        <div class="member-avatar">
+                            <div class="avatar-container">
+                                <img src="./images/members/avatars/sabyasachikuila.png">
+                            </div>
+                            <div>
+                                <!-- members bane -->
+                                <h3>Sabyasachi Kulia</h3>
+                                <!-- members location -->
+                                <p>Bandra, West</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 member-edit-col">
+                        <a href="./members-profile.html" class="btn edit-profile-btn">
+                            <span>Edit</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav class="members-area-nav">
+            <div class="container inner">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <ul class="nav justify-content-start sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./members-homepage.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./members-goal.html">Goal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./members-calendar.html">Calendar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./members-track.html">Tracker</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 d-none d-md-block d-lg-block d-xl-block"></div>
+
+                    <div class="col-md-4 col-12">
+                        <ul class="nav justify-content-end sub-menu">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./members-gym-buddies.html">Gym Buddies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./members-invite.html">Invite</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./members-profile.html">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./members-logout.html">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- CONTENT LAYOUT STARTS HERE -->
+        <section class="main-content">
+            <div class="container inner">
+                <div class="row">
+
+                    <aside class="col-12 col-md-4 col col-left-sidebar" id="sidebar_left">
+                        <div class="sidebar-inner inner">
+
+                            <article class="content-section">
+                                <h3 class="section-title text-center">
+                                    <span>30 Gym Buddies</span>
+                                </h3>
+
+                                <!-- List of invites, search -->
+                                <div class="buddy-list-container" id="buddy_list">
+                                    
+                                    <div class="search-input-container">
+                                        <input type="text" name="search_query" placeholder="search gym buddies" id="search_buddies_query">
+                                        <div class="input-icon">
+                                            <button class="search-icon" id="memberSearch" data-query="search_query">
+                                                <span>Search</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="members-buddies-container custom-scroll" id="member_buddies_container">
+
+                                        <!-- item -->
+                                        <!-- 
+                                        <div class="buddy buddy-item" id="buddy_1">
+                                            <div class="inner">
+                                                <a class="overlay-url" href="#"></a>
+                                                <img class="avatar" src="./images/members/avatars/member-avatar-1.png">
+                                                <div class="name">
+                                                    <p>
+                                                        <span class="fn">Anup</span>
+                                                        <br>
+                                                        <span class="ln">Sharma</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        -->
+
+
+                                    </div>
+
+                                </div>
+                                <!-- List of invites, search -->
+
+                            </article>
+
+                        </div>
+                    </aside>
+
+                    <section class="col-12 col-md-8 col col-right-content" id="content_right">
+                        <div class="content-inner inner">
+
+                            <div class="scroll-content">
+                                
+                                <article class="content-section" id="gym_buddies_acitivities">
+
+                                    <h3 class="section-title">
+                                        <span>New Activities</span>
+                                    </h3>
+                                    <p class="grey"><span><!-- EMPTY : FOR MARGIN --></span></p>
+
+                                    <!--
+                                    Activity Feed  
+                                    -->
+                                    <section class="activity_feed scroll-area" id="activity_feed">
+                                        <div class="inner">
+                                            
+                                            <!-- Activity Feed Item -->
+                                            
+                                            <!-- # Activity Feed Item -->
+
+                                        </div>
+                                    </section>
+                                    <!-- # end Activity Feed -->
+
+                                </article>
+
+
+
+
+                                <!-- <article class="content-section" id="$id">
+                                    <h3 class="section-title">
+                                        <span>Titlw</span>
+                                    </h3>
+
+                                </article> -->
+
+                            </div> <!-- Scroll content end -->
+
+
+
+                            <!-- cog icon btn -->
+                            <div class="edit-area-button">
+                                <a href="#edit">
+                                    <img src="./assets/img/icons/cogwheel-outline.svg" width="20" height="20" />
+                                </a>
+                            </div>
+                            <!-- cog icon btn -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <!-- # CONTENT LAYOUT ENDS -->
+    </div>
+    <!-- # Members Area Container End -->
+
+
+
+    <!-- 
+       @ Main Footer
+       @ Consists of links, company logo and more links at the bottom
+    -->
+    <footer class="main-footer">
+
+        <div class="container inner">
+            <!-- The links to site's important pages -->
+            <div class="footer-section footer-links-panel">
+                <div class="row">
+
+                    <!-- Column 1 -->
+                    <section class="col-12 col-md-2">
+
+                        <div class="links-col" id="links_aboutUs">
+                            <h4><a class="links-section-btn" href="#">About Us</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">History and Legacy</a></li>
+                                <li><a href="#">Board of Directors</a></li>
+                                <li><a href="#">Management Team</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_newsEvents">
+                            <h4><a class="links-section-btn" href="#">News and Events</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Press Releases</a></li>
+                                <li><a href="#">Media Kit</a></li>
+                            </ul>
+                        </div>
+
+                    </section>
+
+
+                    <!-- Column 2 -->
+
+                    <section class="col-12 col-md-2">
+
+                        <div class="links-col" id="links_partnership">
+                            <h4><a class="links-section-btn" href="#">Partnership</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Zorba</a></li>
+                                <li><a href="#">Power World Gyms</a></li>
+                                <li><a href="#">David Llyod Leisure</a></li>
+                                <li><a href="#">Zumba Fitness</a></li>
+                                <li><a href="#">Growfitter</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_beInspired">
+                            <h4><a class="links-section-btn" href="#">Be Inspired</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Share your story</a></li>
+                            </ul>
+                        </div>
+
+
+                    </section>
+                    
+
+                    <!-- Column 3 -->
+                    <section class="col-12 col-md-2">
+
+                        <div class="links-col" id="links_advertise">
+                            <h4><a class="links-section-btn" href="#">Advertise with Us</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Partner with us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_blog">
+                            <h4><a class="links-section-btn" href="#">News and Events</a></h4>
+                            <ul class="nav flex-column">
+                                <li><a href="#">Read our blog</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_franchise">
+                            <h4><a class="links-section-btn" href="#">Franchise</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Talwalkars Advatange</a></li>
+                                <li><a href="#">Apply Here</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_contactUs">
+                            <h4><a class="links-section-btn" href="#">Contact Us</a></h4>
+                            <ul class="nav">
+                                <li><a href="mailto:care@talwalkars.net">Care@talwalkars.net</a></li>
+                            </ul>
+                        </div>
+
+                    </section>
+
+                    <!-- Column 4 -->
+                    <section class="col-12 col-md-3">
+
+                        <div class="links-col" id="links_healthCalculator">
+                            <h4><a class="links-section-btn" href="#">Health Calculator</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Body Mass Index</a></li>
+                                <li><a href="#">Calorie Burn Calculator</a></li>
+                                <li><a href="#">Heart Rate Calculator</a></li>
+                                <li><a href="#">Ideal Weight Calculator</a></li>
+                                <li><a href="#">Body Fat Calculator</a></li>
+                                <li><a href="#">Basal Metabolic Rate</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="links-col" id="links_faqs">
+                            <h4><a class="links-section-btn" href="#">FAQS</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Frequently Asked Questions</a></li>
+                            </ul>
+                        </div>
+
+                    </section>
+
+
+                    <!-- Column 5 -->
+                    <section class="col-12 col-md-3">
+
+                        <div class="links-col" id="links_healthCalculator">
+                            <h4><a class="links-section-btn" href="#">Investor Relations</a></h4>
+                            <ul class="nav">
+                                <li><a href="#">Financial Profile</a></li>
+                                <li><a href="#">Investor Presentations</a></li>
+                                <li><a href="#">Shareholders Info</a></li>
+                                <li><a href="#">Research Reports</a></li>
+                                <li><a href="#">Corporate Announcements</a></li>
+                                <li><a href="#">Shareholding Pattern</a></li>
+                                <li><a href="#">Code of Conduct & Policies</a></li>
+                                <li><a href="#">Corporate Governance</a></li>
+                                <li><a href="#">Offer Documents</a></li>
+                            </ul>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOCIAL CONNECT FOOTER SECTION -->
+        <div class="footer-section social_connect">
+            <div class="container inner">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <h4 class="footer-section-title d-xl-block d-lg-block d-md-block d-none">Social Connect</h4>
+                        <div class="sc-links-container">
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-facebook"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-twitter"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-youtube-play"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-instagram"></i></a></div>
+
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-pinterest-p"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-google-plus"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-linkedin"></i></a></div>
+                            <div class="sc-block"><a class="social-media-link" href="#"><i class="fa fa-circle-o"></i></a></div>
+                        </div>  
+
+                        <div class="offline-msg-container">
+                            <a class="offline-msg btn-block" href="#"><span>Offline Message</span></a>
+                        </div>                              
+                    </div>
+                    <div class="col-md-6 d-none d-lg-flex d-md-flex d-xl-flex align-items-center justify-content-end">
+                        <div class="footer-logo">
+                            <a href="/" class="home-link no-select"><img src="img/talwalkars_logo.png" width="52"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- # SOCIAL CONNECT FOOTER SECTION END -->
+
+
+        <!-- COPYRIGHT AND OTHER LINKS -->
+        <div class="bottom-stripe">
+            <div class="container inner">
+                
+                <div class="inline-block links-block">
+                    <a class="btn" href="#sitemap">Site Map</a>
+                    <a class="btn" href="#tos">Terms of Use</a>
+                    <a class="btn" href="#privacypolicy">Privacy Policy</a>
+                </div>
+
+                <div class="inline-block copyright-block">
+                    <p class="copyright-text"><span class="copyright_c">©</span> 2017 Talwalkars. All rights reserved. </p>
+                </div>
+
+                <div class="inline-block links-block pull-right d-none d-md-block d-lg-block d-xl-block">
+                    <a class="btn" href="#offline" style="border-color: transparent;">Offline</a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </footer> <!-- # main footer end -->
+
+
+    <!-- All universal scripts and styles -->
+    <link rel="stylesheet" href="./assets/css/libs.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.min.css">
+
+
+    <script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bs/v4/bootstrap.js"></script>
+    <script type="text/javascript" src="./assets/js/plugins.js"></script>
+
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <!-- All universal scripts and styles -->
+
+    <!-- Extra Style & scripts for the members area -->
+    <script type="text/javascript" src="./assets/js/members-main.js"></script>
+
+
+
+  </body>
+</html>

@@ -81,7 +81,7 @@ $(document).ready(function(){
 	});
 
 
-	$("#search_invite_query").on("change keydown keyup", function(){
+	$("#search_invite_query").on("keyup keypress blur change", function(){
 		
 		var query = $(this).val();
 
@@ -115,10 +115,16 @@ $(document).ready(function(){
 		$(".members-invited-container").html( "" );
 
 		if ( result.length === 0 ) {
-			$(".members-invited-container").append("<p>Sorry! No invites were found with that name.<br>Please try another name.</p>");
+			$(".members-invited-container").append("<p class='no-results-msg text-center small'>Sorry! No invites were found with that name.<br>Please try another name.</p>");
 		}
 
 		else {
+
+			// In case the input has nothing inside it set result to full json object
+			if ( !query ) {
+				result = memberInvites;
+			}
+
 			for ( var i = 0; i < result.length; i++ ) {
 				var member_invite_item = `
 				<div class="member-invited-item animated">
@@ -146,6 +152,118 @@ $(document).ready(function(){
 	});
 	
 
+
+
+	/*
+	* PAGE: Members Buddies
+	*/
+
+	var gym_buddies;
+	$.ajax({
+		url: "./assets/js/dummy-data/member-buddies.json",
+		success: function( data){
+			gym_buddies = data;
+			gym_buddies = gym_buddies.map( s => combineAllKeyValues(s) );
+			console.log( gym_buddies );
+
+			// Populate the box
+			var all_buddies_boxes = "";
+
+			for ( var i = 0; i < data.length; i++ ) {
+				var member_buddy_item = `
+				<div class="buddy buddy-item" id="buddy_1">
+				    <div class="inner">
+				        <a class="overlay-url" href="${data[i].url}"></a>
+				        <img class="avatar" src="${data[i].avatar}">
+				        <div class="name">
+				            <p>
+				                <span class="fn">${data[i].name.first}</span>
+				                <br>
+				                <span class="ln">${data[i].name.last}</span>
+				            </p>
+				        </div>
+				    </div>
+				</div>
+				`;
+
+				all_buddies_boxes += member_buddy_item;
+			}
+
+			$("#member_buddies_container").append( all_buddies_boxes );
+		}
+	});
+
+
+	$("#search_buddies_query").on("keyup keypress blur change", function(){
+
+		var query = $(this).val();
+
+		var member_buddies = "";
+
+		// Search options
+		var searchOpts = {
+			shouldSort: true,
+			threshold: 0.2,
+			location: 0,
+			distance: 100,
+			maxPatternLength: 32,
+			minMatchCharLength: 5,
+			matchAllTokens: true,
+			findAllMatches: true,
+			keys: [{
+				name: "name.first",
+				weight: 0.3
+			}, {
+				name: "name.last",
+				weight: 0.3
+			}, {
+				name: "name.full",
+				weight: 0.1
+			}]
+		};
+
+
+		// Combine the name.first and name.last property
+		var fuse = new Fuse(gym_buddies, searchOpts);
+		var result = fuse.search( query );
+
+
+		// Add the result to the view
+		$("#member_buddies_container").html( "" );
+
+		if ( result.length === 0 && query.length > 0) {
+			$("#member_buddies_container").append("<p class='no-results-msg text-center small'>Sorry! No buddies were found with that name.<br>Please try another name.</p>");
+		}
+
+		else {
+
+			if ( !query ) {
+				result = gym_buddies;
+			}
+
+			for ( var i = 0; i < result.length; i++ ) {
+				var member_buddy_item = `
+				<div class="buddy buddy-item" id="buddy_1">
+				    <div class="inner">
+				        <a class="overlay-url" href="${result[i].url}"></a>
+				        <img class="avatar" src="${result[i].avatar}">
+				        <div class="name">
+				            <p>
+				                <span class="fn">${result[i].name.first}</span>
+				                <br>
+				                <span class="ln">${result[i].name.last}</span>
+				            </p>
+				        </div>
+				    </div>
+				</div>
+				`;
+
+				member_buddies += member_buddy_item;
+			}
+			
+			$("#member_buddies_container").append( member_buddies );
+		}
+	});
 	
 
 
@@ -265,4 +383,12 @@ function progressPie( canvas, progress ) {
 // helper function to convert degrees into radians
 function toRadians(deg) {
     return deg * Math.PI / 180
+}
+
+
+// Combine all properties 
+function combineAllKeyValues( obj, separator ) {
+ separator = separator || " ";
+ obj.name.full = Object.keys(obj.name).map(s=> obj.name[s]).join( separator );
+ return obj;
 }
