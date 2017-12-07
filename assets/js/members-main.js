@@ -26,15 +26,16 @@ $(document).ready(function(){
 
 	// Form Container - Floating Labels
 	$(".form-container .form-row .input-field.floating-label input, .form-container .form-row .input-field.floating-label select").on("change", function(){
-
 	      if ( $(this).val().length > 0 ) {
 	        $(this).parent().parent(".form-row").addClass("input--filled");
 	      }
-
 	      else {
 	        $(this).parent().parent(".form-row").removeClass("input--filled");
 	      }
-
+	}).each(function(){
+		if ( $(this).val().length > 0 ) {
+		  $(this).parent().parent(".form-row").addClass("input--filled");
+		}
 	});
 
 
@@ -264,7 +265,82 @@ $(document).ready(function(){
 			$("#member_buddies_container").append( member_buddies );
 		}
 	});
-	
+
+
+
+	// Post Photo Slider on Activity Feed
+	$(function(){
+	  $('.post-photo-slider').bxSlider({
+	    mode: 'horizontal',
+	    captions: true,
+	    slideWidth: 360,
+	    pager: false,
+	    wrapperClass: "post-photo-slider-wrapper",
+	    infiniteLoop: false,
+	    hideControlOnEnd: true
+	  });
+	});
+
+
+
+
+
+
+
+
+
+
+
+	/*
+	* PAGE: Members Profile
+	*/
+
+	// Member Profile Edit Area
+	var member_profile_tabs = {
+		"account-details"  : "account_details",
+		"body-information" : "body_information",
+		"gym-details"      : "gym_details",
+		"membership"       : "membership"
+	};
+
+	var current_profile_tab = "";
+
+
+	if ( $("#members_profile").length > 0 ) {
+		
+		// Upon page load check the hash and change the page accordingly
+		var hashValue =  window.location.hash.substr(1);
+		if ( member_profile_tabs[hashValue] != undefined ) {
+			// First hide all of the sections
+			$(".profile-form-sections").css({
+				'display': 'none'
+			});
+
+			// Then fade In the one we want to show
+			$(".profile-form-sections#" + member_profile_tabs[hashValue]).fadeIn(200);
+		}
+
+		// Change the page using the links
+		$(".profile-tab-link").on("click", function(e){
+			// trim the #
+			var sectionRef = $(this).attr('href')[0] == '#' ? $(this).attr('href').substring(1) : $(this).attr('href');
+
+			// 
+			if ( member_profile_tabs[sectionRef] ) {
+				// First hide all of the sections
+				$(".profile-form-sections").css({
+					'display': 'none'
+				});
+
+				// Then fade In the one we want to show
+				$(".profile-form-sections#" + member_profile_tabs[sectionRef]).fadeIn(200);
+			}
+
+			e.preventDefault();
+
+		});
+
+	}
 
 
 

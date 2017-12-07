@@ -574,6 +574,8 @@ nav.members-area-nav {
     line-height: 1.2;
     z-index: 2;
     font-size: 1em;
+    font-size: 0.95em;
+    text-shadow: 1px 1px 1px #111;
 }
 
 .members-buddies-container .buddy-item .name > p {
@@ -581,8 +583,189 @@ nav.members-area-nav {
 }
 
 
+/*-------------------------------------
+* MEMBERS' ACTIVITY FEED
+* PAGE: Member Buddies
+--------------------------------------*/
 
 
+
+.activity-item-container {
+	margin-bottom: 30px;
+	padding: 10px 0;
+}
+
+
+/* Activity Feed Item Header  */
+.activity-item-container .item-header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.activity-item-container .item-header .avatar {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 20px;
+}
+
+.activity-item-container .item-header .avatar img {
+	width: 100%;
+	height: auto;
+}
+
+.activity-item-container .item-header .text {
+	max-width: 360px;
+}
+
+.activity-item-container .item-header .text > p {
+	margin: 0;
+	color: #666;
+}
+
+.activity-item-container .item-header .text a {
+	color: inherit;
+	text-decoration: none;
+	color: #333;
+}
+
+
+
+
+/*
+* Acitivity Item - Photo Slider
+*/
+
+.post-slider-container {
+	position: relative;
+}
+
+
+.post-slider-container .bx-controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    top: 50%;
+    margin-top: -15px;
+    
+}
+
+.post-slider-container .bx-controls .bx-controls-direction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    padding: 0 10px;
+}
+
+.post-slider-container .bx-next, 
+.post-slider-container .bx-prev {
+    font-size: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(../img/icons/up-button.svg) no-repeat center;
+    background-size: 30px 30px;
+    -webkit-transition: 0.1s all ease-in-out;
+    -moz-transition: 0.1s all ease-in-out;
+    transition: 0.1s all ease-in-out;
+}
+
+
+.post-slider-container .bx-prev.disabled,
+.post-slider-container .bx-next.disabled {
+	opacity: 0.6;
+}
+
+.post-slider-container .bx-prev {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+.post-slider-container .bx-next {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+
+/*
+* Gym Card
+*/
+
+
+.post-program-item .gym-program-card {
+	background-color: #111;
+	width: 250px;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	color: #fff;
+	overflow: hidden;
+}
+
+.post-program-item .gym-program-card .inner {
+	padding: 20px;
+}
+
+.post-program-item .gym-program-card .program-item-text,
+.post-program-item .gym-program-card .programs-btns {
+	position: relative;
+	z-index: 2;
+}
+
+.post-program-item .gym-program-card .programs-btns {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	left: 20px;
+}
+
+
+
+/*-------------------------------------
+* MEMBERS' PROFILE / PROFILE EDIT
+* PAGE: Members Profile
+--------------------------------------*/
+
+.profile-avatar-container {
+	text-align: center;
+}
+
+.profile-avatar-container .profile-avatar-image {
+	margin: 20px 0;
+	display: inline-block;
+}
+
+/* Profile Edit / Form Sections links */
+
+.profile-link-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-link-list li {
+    text-align: center;
+    border-bottom: 2px solid #dde5ef7a;
+}
+
+.profile-link-list li:last-child {
+    border-bottom: 0px;
+}
+
+.profile-link-list li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #ff6829;
+    text-transform: uppercase;
+}
 
 
 
@@ -812,7 +995,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ec51', end
 }
 
 /* floating label */
-.form-container .form-row .input-field.floating-label label {
+.form-container .form-row .input-field.floating-label label,
+.form-container .form-row .input-field.floated-label label {
     position: absolute;
     top: 5px;
     font-size: 16px;
@@ -822,7 +1006,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ec51', end
 
 .form-container .form-row .input-field.floating-label  input:focus + label,
 .form-container .form-row .input-field.floating-label  textarea:focus + label,
-.form-container .form-row.input--filled .input-field.floating-label label  {
+.form-container .form-row.input--filled .input-field.floating-label label,
+.form-container .form-row .input-field.floated-label label  {
     font-size: 12px;
     top: -1rem;
 }
